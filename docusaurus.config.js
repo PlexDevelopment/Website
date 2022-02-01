@@ -55,6 +55,11 @@ const config = {
 	    position: 'left',
 	    label: 'Compiling',
 	  },
+          {
+            position: 'right',
+            label: 'GitHub',
+	    href: 'https://github.com/PlexDevelopment',
+          },
         ],
       },
       footer: {
@@ -87,12 +92,16 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'GitHub',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/PlexDevelopment',
+                label: 'Plex',
+                href: 'https://github.com/PlexDevelopment/Plex',
               },
+	      {
+		label: 'Docs',
+		href: 'https://github.com/PlexDevelopment/docs',
+	      }
             ],
           },
         ],
