@@ -11,6 +11,7 @@ This page will show you how to modify the configuration file. The configuration 
 Below is the default `config.yml` file when Plex is loaded for the first time.
 ```yaml title=/plugins/Plex/config.yml
 # Plex Configuration File
+# For documentation, please visit: https://docs.plex.us.org
 
 server:
   name: "Plexus"
@@ -36,6 +37,7 @@ data:
     port: 27017
     db: "plex"
   side: # This is Redis, leave password blank if auth is false
+    enabled: false
     auth: true
     hostname: 127.0.0.1
     port: 6379
@@ -106,6 +108,11 @@ This is the port for whichever database software you use. Note that `sqlite` doe
 
 ### data.central.db 
 This is the name for whichever database software you use. Note that `sqlite` does not require a name.
+
+### data.side.enabled
+**Options**: `true` / `false`
+
+This will enabled Plex's Redis functionality.
 
 ### data.side.auth
 **Options**: `true` / `false`

@@ -68,6 +68,7 @@ yourRank: "<b>Your rank is: <v>"
 banningPlayer: "<e><v> - Banning <v>"
 unbanningPlayer: "<b><v> - Unbanning <v>"
 playerNotBanned: "<e>That player is not banned!"
+teleportedToWorldSpawn: "<b>Teleporting to the local spawn"
 ```
 
 # Troubleshooting
