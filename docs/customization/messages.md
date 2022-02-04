@@ -1,13 +1,12 @@
 ---
 id: messages
 title: Messages
-sidebar_position: 2
 ---
 
 # Introduction
 Almost all of the messages inside of Plex are fully customizable. This page will document how to change messages in the ```messages.yml``` file inside the Plex folder.
 
-# Default file
+## Default file
 The default `messages.yml` file is below.
 ```yaml title=/plugins/Plex/messages.yml
 # Plex Messages File
@@ -71,5 +70,5 @@ playerNotBanned: "<e>That player is not banned!"
 teleportedToWorldSpawn: "<b>Teleporting to the local spawn"
 ```
 
-# Troubleshooting
+## Troubleshooting
 If you receive `No message.` when executing a command, it is likely you need to regenerate your `messages.yml` file. The default configuration file is also available on [GitHub](https://raw.githubusercontent.com/PlexDevelopment/Plex/master/src/main/resources/messages.yml).
