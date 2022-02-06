@@ -111,12 +111,12 @@ This is the name for whichever database software you use. Note that `sqlite` doe
 ### data.side.enabled
 **Options**: `true` / `false`
 
-This will enabled Plex's Redis functionality.
+This will enable Plex's Redis functionality.
 
 ### data.side.auth
 **Options**: `true` / `false`
 
-This is whether authentication mode for Redis is turned on or not
+This is whether authentication mode for Redis is turned on or not.
 
 :::info
 It is highly recommended to have Redis authentication turned on.
@@ -129,7 +129,7 @@ This is the hostname for Redis. This is required for Redis to work.
 This is the port that Redis is listening on. This is requird for Redis to work.
 
 ### data.side.password
-This is the password for your Redis instance. Note that this can be left if authentication is turned off.
+This is the password for your Redis instance. Note that this can be left blank if authentication is turned off.
 
 
 ## Worlds
