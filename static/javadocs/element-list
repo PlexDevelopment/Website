@@ -21,5 +21,6 @@ dev.plex.services
 dev.plex.services.impl
 dev.plex.storage
 dev.plex.util
+dev.plex.util.adapter
 dev.plex.util.menu
 dev.plex.world
