@@ -177,9 +177,9 @@ An infinite amount of worlds can be generated from the configuration file. A few
   <world_name>:
     name: 'Human readable name'
     permission: 'plex.world.example'
-    noEdit: "&cThis message will display if a player doesn't have permission to edit a world."
     requiredLevels:
       - "Rank.ADMIN" # The minimum rank required to edit the world
+    noEdit: "&cThis message will display if a player doesn't have permission to edit a world."
     parameters:
       grass_block: 1
       dirt: 32
