@@ -178,7 +178,8 @@ An infinite amount of worlds can be generated from the configuration file. A few
     name: 'Human readable name'
     permission: 'plex.world.example'
     noEdit: "&cThis message will display if a player doesn't have permission to edit a world."
-    requiredLevels: "Rank.ADMIN" # The minimum rank required to edit the world
+    requiredLevels:
+      - "Rank.ADMIN" # The minimum rank required to edit the world
     parameters:
       grass_block: 1
       dirt: 32
@@ -186,6 +187,8 @@ An infinite amount of worlds can be generated from the configuration file. A few
       bedrock: 1
 ```
 Note that in the `parameters` section, this is how the world should actually be generated. The order is from top to bottom. In the example above, a world will generate with one grass layer, 32 layers of dirt, 16 layers of stone, and one layer of bedrock.
+
+For a list of Ranks and Titles, you can refer to the Javadocs: [Ranks](https://docs.plex.us.org/javadocs/dev/plex/rank/enums/Rank.html), [Title](https://docs.plex.us.org/javadocs/dev/plex/rank/enums/Title.html).
 
 ## Debugging
 **Options:** `true` / `false`
