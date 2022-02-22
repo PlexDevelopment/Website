@@ -16,11 +16,21 @@ server:
   name: "Plexus"
   motd: "%servername% - Minecraft %mcversion%"
   colorize_motd: true
+  sample:
+    - "&cForums: https://forum.plex.us.org"
+
+titles:
+  masterbuilders: []
+  owners:
+    - Telesphoreo
 
 # Ban message is customized in the messages.yml file. The URL to appeal at is below.
 banning:
-  ban_url: 'https://forum.plex.us.org'
+  ban_url: "https://forum.plex.us.org"
 
+chat:
+  max-tag-length: 16
+  name-color: 'f' #Color code for name color
 
 # Settings for commands relating to Plex
 commands:
@@ -42,9 +52,12 @@ data:
     port: 6379
     password: ""
 
+# requiredLevel if permissions are ranks, else permissions
 worlds:
   flatlands:
     name: "Flatlands"
+    permission: "plex.world.flatlands"
+    noEdit: "&cYou can't edit this world!"
     parameters:
       grass_block: 1
       dirt: 32
@@ -52,6 +65,10 @@ worlds:
       bedrock: 1
   adminworld:
     name: "Admin World"
+    permission: "plex.world.adminworld"
+    requiredLevels:
+      - "Rank.ADMIN" # Minimum rank requirement
+    noEdit: "&cYou can't edit this world!"
     parameters:
       grass_block: 1
       dirt: 32
@@ -59,6 +76,10 @@ worlds:
       bedrock: 1
   masterbuilderworld:
     name: "MasterBuilder World"
+    permission: "plex.world.masterbuilderworld"
+    requiredLevels:
+      - "Title.MASTER_BUILDER" # Title has no "minimum", so this will have to be their title
+    noEdit: "&cYou can't edit this world!"
     parameters:
       grass_block: 1
       dirt: 32
@@ -76,10 +97,28 @@ The name of your server goes here and is used throughout Plex.
 The text here will appear on the server list.
 ### server.colorize_motd
 This determines if the message of the day should randomly be colorized. You can disable this option and manually colorize your MOTD.
+### server.sample
+This lets you specify a custom message under the player count in the server list.
+
+## Titles
+### titles.masterbuilders
+A list of players who will show up as a masterbuilder.
+
+### titles.owners
+A list of players who will show up as an owner.
 
 ## Banning
 ### banning.message
 This message will appear whenever a player tries to join the server, but is banned. You can use any color coding you would like here.
+
+## Chat
+### chat.max_tag_length
+Default: `16`
+The maximum length a tag may be in game.
+
+### chat.name-color
+Default: `f`
+The default color a tag should be if a player doesn't specify any colors.
 
 ## Commands
 ### comamnds.permissions
@@ -137,6 +176,9 @@ An infinite amount of worlds can be generated from the configuration file. A few
 ```yaml title=/plugins/Plex/config.yml
   <world_name>:
     name: 'Human readable name'
+    permission: 'plex.world.example'
+    noEdit: "&cThis message will display if a player doesn't have permission to edit a world."
+    requiredLevels: "Rank.ADMIN" # The minimum rank required to edit the world
     parameters:
       grass_block: 1
       dirt: 32

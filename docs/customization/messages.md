@@ -11,6 +11,12 @@ The default `messages.yml` file is below.
 ```yaml title=/plugins/Plex/messages.yml
 # Plex Messages File
 
+# Messages in here will be placed in for certain commands, actions, etc.
+# Warning: not all commands have customizable messages
+
+# Base color - the main color prefix; will be used following each of the messages below
+# Broadcast color - the color used when broadcasting a message
+# Error color - the color of an error; will be used when an error is thrown from a command
 baseColor: "7"
 broadcastColor: "b"
 errorColor: "c"
@@ -25,8 +31,7 @@ test: "this is a test message!"
 variableTest: "variable test with <v>!"
 playerNotFound: "Player not found!"
 worldNotFound: "World not found!"
-noAdminWorldBlockPlace: "<e>You are not allowed to place blocks in the admin world!"
-noAdminWorldBlockBreak: "<e>You are not allowed to break blocks in the admin world!"
+
 # 1: the world you have been teleported to
 playerWorldTeleport: "You have been teleported to <v>."
 # 1: the command sender who opped everyone
@@ -58,6 +63,7 @@ nameHistoryDoesntExist: "<e>Couldn't find this user! Please check if your spelli
 gameModeSetTo: "Your gamemode has been set to <v>."
 setOtherPlayerGameModeTo: "You set <v>'s gamemode to <v>."
 playerSetOtherGameMode: "<v> set your gamemode to <v>."
+setEveryoneGameMode: "<b><v> - Changing everyone's gamemode to <v>"
 consoleMustDefinePlayer: "You must define a player since you are running this command from console."
 newAdminAdded: "<b><v> - Adding <v> to the admin list"
 adminRemoved: "<e><v> - Removing <v> from the admin list"
