@@ -10,7 +10,7 @@ This page will show you how to modify the configuration file. The configuration 
 Below is the default `config.yml` file when Plex is loaded for the first time.
 ```yaml title=/plugins/Plex/config.yml
 # Plex Configuration File
-# For documentation, please visit: https://docs.plex.us.org
+# For documentation, please visit: https://plex.us.org
 
 server:
   name: "Plexus"
@@ -20,7 +20,7 @@ server:
     - "&cForums: https://forum.plex.us.org"
 
 titles:
-  masterbuilders: []
+  masterbuilders: [ ]
   owners:
     - Telesphoreo
 
@@ -30,7 +30,8 @@ banning:
 
 chat:
   max-tag-length: 16
-  name-color: 'f' #Color code for name color
+  # Color code for name color
+  name-color: 'f'
 
 # Settings for commands relating to Plex
 commands:
@@ -52,12 +53,26 @@ data:
     port: 6379
     password: ""
 
-# requiredLevel if permissions are ranks, else permissions
+# See https://plex.us.org/docs/customization/config#worlds for documentation
 worlds:
   flatlands:
     name: "Flatlands"
     permission: "plex.world.flatlands"
     noEdit: "&cYou can't edit this world!"
+    gameRules:
+      - "doWeatherCycle;false"
+      - "doDaylightCycle;false"
+      - "doMobSpawning;false"
+      - "keepInventory;true"
+      - "doFireTick;false"
+      - "doMobLoot;false"
+      - "mobGriefing;false"
+      - "doTileDrops;false"
+      - "commandBlockOutput;false"
+      - "naturalRegeneration;true"
+      - "announceAdvancements;false"
+      - "showDeathMessages;false"
+      - "sendCommandFeedback;false"
     parameters:
       grass_block: 1
       dirt: 32
@@ -69,6 +84,20 @@ worlds:
     requiredLevels:
       - "Rank.ADMIN" # Minimum rank requirement
     noEdit: "&cYou can't edit this world!"
+    gameRules:
+      - "doWeatherCycle;false"
+      - "doDaylightCycle;false"
+      - "doMobSpawning;false"
+      - "keepInventory;true"
+      - "doFireTick;false"
+      - "doMobLoot;false"
+      - "mobGriefing;false"
+      - "doTileDrops;false"
+      - "commandBlockOutput;false"
+      - "naturalRegeneration;true"
+      - "announceAdvancements;false"
+      - "showDeathMessages;false"
+      - "sendCommandFeedback;false"
     parameters:
       grass_block: 1
       dirt: 32
@@ -80,6 +109,20 @@ worlds:
     requiredLevels:
       - "Title.MASTER_BUILDER" # Title has no "minimum", so this will have to be their title
     noEdit: "&cYou can't edit this world!"
+    gameRules:
+      - "doWeatherCycle;false"
+      - "doDaylightCycle;false"
+      - "doMobSpawning;false"
+      - "keepInventory;true"
+      - "doFireTick;false"
+      - "doMobLoot;false"
+      - "mobGriefing;false"
+      - "doTileDrops;false"
+      - "commandBlockOutput;false"
+      - "naturalRegeneration;true"
+      - "announceAdvancements;false"
+      - "showDeathMessages;false"
+      - "sendCommandFeedback;false"
     parameters:
       grass_block: 1
       dirt: 32
@@ -180,6 +223,20 @@ An infinite amount of worlds can be generated from the configuration file. A few
     requiredLevels:
       - "Rank.ADMIN" # The minimum rank required to edit the world
     noEdit: "&cThis message will display if a player doesn't have permission to edit a world."
+    gameRules:
+      - "doWeatherCycle;false"
+      - "doDaylightCycle;false"
+      - "doMobSpawning;false"
+      - "keepInventory;true"
+      - "doFireTick;false"
+      - "doMobLoot;false"
+      - "mobGriefing;false"
+      - "doTileDrops;false"
+      - "commandBlockOutput;false"
+      - "naturalRegeneration;true"
+      - "announceAdvancements;false"
+      - "showDeathMessages;false"
+      - "sendCommandFeedback;false"
     parameters:
       grass_block: 1
       dirt: 32
@@ -189,6 +246,8 @@ An infinite amount of worlds can be generated from the configuration file. A few
 Note that in the `parameters` section, this is how the world should actually be generated. The order is from top to bottom. In the example above, a world will generate with one grass layer, 32 layers of dirt, 16 layers of stone, and one layer of bedrock.
 
 For a list of Ranks and Titles, you can refer to the Javadocs: [Ranks](https://docs.plex.us.org/javadocs/dev/plex/rank/enums/Rank.html), [Title](https://docs.plex.us.org/javadocs/dev/plex/rank/enums/Title.html).
+
+The gamerule section is what gamerules are set for the world by default. The syntax is the official gamerule name, a semicolon, and either `true` or `false`.
 
 ## Debugging
 **Options:** `true` / `false`

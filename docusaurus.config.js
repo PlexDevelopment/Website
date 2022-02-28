@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Plex Docs',
-  tagline: 'The official documentation for Plex',
-  url: 'https://docs.plex.us.org',
+  title: 'Plex',
+  tagline: 'Welcome to the website and documentation for Plex!',
+  url: 'https://plex.us.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -40,7 +40,7 @@ const config = {
       title: 'Plex',
       logo: {
         alt: 'Plex Logo',
-        src: 'img/logo.svg',
+        src: 'img/plexlogo.png',
       },
       items: [
       {
@@ -59,6 +59,11 @@ const config = {
        position: 'left',
        label: 'Javadocs',
        to: 'pathname:///javadocs',
+     },
+     {
+       position: 'left',
+       label: 'Downloads',
+       to: 'https://ci.plex.us.org',
      },
      {
       position: 'right',
@@ -85,6 +90,10 @@ const config = {
         label: 'Javadocs',
         to: 'pathname:///javadocs',
       },
+      {
+        label: 'Downloads',
+        to: 'https://ci.plex.us.org',
+      },
       ],
     },
     {
@@ -106,6 +115,10 @@ const config = {
       {
         label: 'Plex',
         href: 'https://github.com/PlexDevelopment/Plex',
+      },
+      {
+        label: 'Blackout',
+        href: 'https://github.com/PlexDevelopment/Blackout',
       },
       {
         label: 'Docs',
