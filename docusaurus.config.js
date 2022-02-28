@@ -13,8 +13,8 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'PlexDevelopment', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  organizationName: 'PlexDevelopment',
+  projectName: 'Website',
 
   presets: [
   [
@@ -23,7 +23,6 @@ const config = {
   ({
     docs: {
       sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           editUrl: 'https://github.com/PlexDevelopment/docs/tree/master',
         },
         theme: {
@@ -122,7 +121,7 @@ const config = {
       },
       {
         label: 'Docs',
-        href: 'https://github.com/PlexDevelopment/docs',
+        href: 'https://github.com/PlexDevelopment/Website',
       }
       ],
     },
