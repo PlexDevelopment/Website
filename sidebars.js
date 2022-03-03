@@ -36,6 +36,11 @@ const sidebars = {
     },
     {
       type: 'doc',
+      label: 'Indefinite Bans',
+      id: 'indefinitebans',
+    },
+    {
+      type: 'doc',
       label: 'Configuring Redis',
       id: 'redis',
     },

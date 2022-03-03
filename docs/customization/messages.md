@@ -9,6 +9,7 @@ Almost all of the messages inside of Plex are fully customizable. This page will
 ## Default file
 The default `messages.yml` file is below.
 ```yaml title=/plugins/Plex/messages.yml# Plex Messages File
+# Plex Messages File
 # This file uses the MiniMessage system.
 # Documentation available at https://docs.adventure.kyori.net/minimessage/format.html
 
@@ -25,6 +26,7 @@ The default `messages.yml` file is below.
 # 3. Expiry
 # 4. Punisher
 banMessage: "<red>You have been banned! You may appeal at <gold><v>.\n<red>Reason: <gold><v>\n<red>End date: <gold><v>\n<red>Banned by: <gold><v>"
+indefBanMessage: "<red>Your <v> is currently banned! You may appeal at <gold><v>."
 test: "this is a test message!"
 # 1. The command sender's username
 variableTest: "variable test with <v>!"
@@ -44,16 +46,22 @@ oppedPlayer: "<aqua><v> - Opped <v>"
 deoppedPlayer: "<red><v> - Deopped <v>"
 # 1. The person who is freezing
 # 2. The person who has been frozen
-frozePlayer: "<aqua><v> - Froze <v>"
+frozePlayer: "<red><v> - Froze <v>"
 # 1. The person who is unfreezing
 # 2. The person who has been unfrozen
 unfrozePlayer: "<aqua><v> - Unfroze <v>"
-# 1. The person who is freezing
-# 2. The person who has been frozen
-mutedPlayer: "<aqua><v> - Muted <v>"
-# 1. The person who is unfreezing
-# 2. The person who has been unfrozen
+# 1. The command sender
+# 2. The person who has been muted
+mutedPlayer: "<red><v> - Muted <v>"
+# 1. The command sender
+# 2. The person who has been unmuted
 unmutedPlayer: "<aqua><v> - Unmuted <v>"
+# 1. The person who is locking up
+# 2. The person who has been locked up
+lockedUpPlayer: "<aqua><v> - Locking up <v>"
+# 1. The person who is unlocking
+# 2. The person who has been unlocked
+unlockedUpPlayer: "<aqua><v> - Unlocking <v>"
 noPermission: "<red>You cannot use this command!"
 # 1. The rank required to use the command
 noPermissionRank: "<red>You must be at least <v> to use this command!"
@@ -115,12 +123,14 @@ playerNotMuted: "<red>That player is not muted!"
 playerBanned: "<red>That player is already banned!"
 playerFrozen: "<red>That player is already frozen!"
 playerMuted: "<red>That player is already muted!"
+playerLockedUp: "<red>That player is already locked up!"
 muted: "<red>You are currently muted - STFU!"
+kickedPlayer: "<red><v> - Kicking <v>"
 teleportedToWorldSpawn: "<aqua>Teleporting to the local spawn"
 toggleCommandSpy: "CommandSpy has been"
 enabled: "enabled."
 disabled: "disabled."
-adminChatFormat: '&8[&9AdminChat&8] &4<v> &7» &6<v>'
+adminChatFormat: '<dark_gray>[<blue>AdminChat<dark_gray>] <dark_red><v> <gray>» <gold><v>'
 maximumPrefixLength: "<red>The maximum length for a tag may only be <v>."
 prefixCleared: "<aqua>Your prefix has been cleared."
 otherPrefixCleared: "<aqua>You have cleared <v>'s prefix."

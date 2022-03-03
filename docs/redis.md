@@ -1,7 +1,6 @@
 ---
 id: redis
 title: Configuring Redis
-sidebar_position: 6
 ---
 
 # Introduction
