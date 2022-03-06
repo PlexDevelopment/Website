@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <Layout
       title={`Home`}
-      description="The official documentation for Plex.">
+      description="The official website and documentation for Plex">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
