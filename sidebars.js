@@ -26,6 +26,11 @@ const sidebars = {
     },
     {
       type: 'doc',
+      label: 'Versions',
+      id: 'versions',
+    },
+    {
+      type: 'doc',
       label: 'Compiling',
       id: 'compiling',
     },

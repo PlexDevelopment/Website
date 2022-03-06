@@ -4,33 +4,35 @@ title: Indefinite Bans
 ---
 
 # Introduction
-Similar to TotalFreedomMod, Plex has indefinite bans. Indefinite bans are reserved for players who should not automatically be unbanned. Anyone who has access to the `indefbans.yml` file can add indefinite bans.
+Similar to TotalFreedomMod, Plex has indefinite bans. Indefinite bans are reserved for players who should not automatically be unbanned. Anyone who has access to the `indefbans.yml` file can add indefinite bans. If you are using Redis, all indefinite bans will be uploaded to Redis on startup. From that point on, indefinite bans will be fetched from Redis instead of the `indefbans.yml` file. **Redis is NOT required to use indefinite bans.** If you do not use Redis, Plex will fetch indefinite bans from the `indefbans.yml` file. No matter which medium you use, you will always add new entries to the `indefbans.yml` file. Note that there is no in-game command for adding or removing indefinite bans.
 
 ## Default file
 ```yaml title=/plugins/Plex/indefbans.yml
 # Plex Indefinite Bans File
 # Players with their UUID / IP / Usernames in here will be indefinitely banned until removed
 
-# List of permanently banned UUIDs
 # If you want to get someone's UUID, use https://api.ashcon.app/mojang/v2/user/<username>
-uuids:
-  - 1dac0e92-f565-4479-afd5-38c7df5f9732 # badplayer123
+griefers:
+  users:
+    - "badplayer123"
+    - "badplayer321"
+  uuids:
+    - 1dac0e92-f565-4479-afd5-38c7df5f9732 # badplayer123
+  ips:
+    - 123.123.123.123
 
-# List of permanently banned IP addresses
-ips:
-  - 169.254.69.69
-
-# List of permanently banned UUIDs
-# If you want to get someone's username, use https://api.ashcon.app/mojang/v2/user/<uuid>, or just remember it
-usernames:
-  - badplayer123
+# Note that these keys can be anything, they are simply to help you keep things organized.
+# They are not used within the plugin. Duplicate keys are not allowed, and will not work.
+bypassers:
+  users:
+    - "bypasser1"
+  ips:
+    - 321.321.321.321
+    - 169.254.1.2
 ```
 
-### UUIDs
-Plex allows you to add UUIDs as indefinite bans. To get the UUID of a player, you can use the Ashcon API. Replace `<username>` with the player's username: `https://api.ashcon.app/mojang/v2/user/<username>`. You can then add the UUID to the indefinite ban list.
+### How it works
+Each entry starts with a description. This is to help you organize indefinite bans. For example, you could have a section `griefers` for serial griefers or `bypassers` for players who have bypassed bans. The `users` section is for usernames only, the `uuids` section is only for UUIDs, and the `ips` section is for IPs only. If you do not want to ban a type, you do not have to include it. Note that no duplicate descriptions can exist. This means you cannot have `bypassers` as a section twice. The actual descriptions are not used in the plugins and can be anything you like. They do not affect the indefinite ban in any way.
 
-### IPs
-You can add IP addresses as indefinite bans if you know it. Note that it must be a valid IPv4 Address. This means each group must be between 0 - 255 and there can only be three separators.
-
-### Usernames
-If you wish to only ban a username and not a UUID, Plex allows you to do so. Note that if a player changes their name, they will be allowed to join again. To convert a UUID to a username, you can use the Ashcon API. Replace `<uuid>` with the player's UUID: `https://api.ashcon.app/mojang/v2/user/<uuid>`. You can then add the UUID to the indefinite ban list. If you already know the player's username, you may simply enter it.
+### Converting indefinite bans
+If you are switching from TotalFreedomMod to Plex, we have developed a tool called IBConverter to convert your existing indefinite bans into Plex's format. For more information on IBConverter, visit [the GitHub page](https://github.com/PlexDevelopment/IBConverter). This tool was written in Python. The only thing you need to give it is your existing `indefinitebans.yml` file from TotalFreedomMod. Note that it requires Python 3.7 or newer and `pip` to be installed on your system.
