@@ -29,6 +29,10 @@ banning:
   ban_url: "https://forum.plex.us.org"
 
 chat:
+  # Should the server use Plex's chat system? It is recommended to keep this on if you are using ranks.
+  # If you are using permissions, you should turn this off and use Vault to handle prefixes with a different chat plugin
+  enabled: true
+  # The maximum amount of characters a player can have for their tag
   max-tag-length: 16
   # Color code for name color
   name-color: 'f'
@@ -155,6 +159,10 @@ A list of players who will show up as an owner.
 This message will appear whenever a player tries to join the server, but is banned. You can use any color coding you would like here.
 
 ## Chat
+### chat.enabled
+Default: `true`
+Determines if the chat system should be enabled. It's useful to turn this off if you're using permissions and want to use prefixes from another plugin instead.
+
 ### chat.max_tag_length
 Default: `16`
 The maximum length a tag may be in game.

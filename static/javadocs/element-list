@@ -10,6 +10,7 @@ dev.plex.config
 dev.plex.event
 dev.plex.handlers
 dev.plex.listener
+dev.plex.listener.annotation
 dev.plex.listener.impl
 dev.plex.menu
 dev.plex.module

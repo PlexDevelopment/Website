@@ -40,6 +40,11 @@ const sidebars = {
       items: ['customization/config', 'customization/messages'],
     },
     {
+      type: 'category',
+      label: 'Modules',
+      items: ['modules/introduction', 'modules/libsdisguises'],
+    },
+    {
       type: 'doc',
       label: 'Indefinite Bans',
       id: 'indefinitebans',
