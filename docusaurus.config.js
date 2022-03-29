@@ -13,7 +13,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'PlexDevelopment',
+  organizationName: 'plexusorg',
   projectName: 'Website',
 
   presets: [
@@ -23,7 +23,7 @@ const config = {
   ({
     docs: {
       sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/PlexDevelopment/docs/tree/master',
+          editUrl: 'https://github.com/plexusorg/docs/tree/master',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -67,7 +67,7 @@ const config = {
      {
       position: 'right',
       label: 'GitHub',
-      href: 'https://github.com/PlexDevelopment',
+      href: 'https://github.com/plexusorg',
     },
     ],
   },
@@ -113,15 +113,15 @@ const config = {
       items: [
       {
         label: 'Plex',
-        href: 'https://github.com/PlexDevelopment/Plex',
+        href: 'https://github.com/plexusorg/Plex',
       },
       {
         label: 'Blackout',
-        href: 'https://github.com/PlexDevelopment/Blackout',
+        href: 'https://github.com/plexusorg/Blackout',
       },
       {
         label: 'Docs',
-        href: 'https://github.com/PlexDevelopment/Website',
+        href: 'https://github.com/plexusorg/Website',
       }
       ],
     },
