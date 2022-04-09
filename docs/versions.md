@@ -14,3 +14,4 @@ Plex builds against the latest Minecraft version available. A table has been pro
 | 0.7          | 1.18 - 1.18.1      |
 | 0.8          | 1.18.2             |
 | 0.9          | 1.18.2             |
+| 1.0          | 1.18.2             |
