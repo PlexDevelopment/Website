@@ -246,7 +246,7 @@ A list of players who will show up as a masterbuilder.
 A list of players who will show up as an owner.
 
 ## Banning
-### ban_url
+### banning.ban_url
 The URL to be used when a player sees the ban message. The full ban message can be changed in `messages.yml`.
 
 ## Chat
