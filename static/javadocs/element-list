@@ -1,8 +1,12 @@
 dev.plex
 dev.plex.admin
 dev.plex.cache
+dev.plex.cache.notes
+dev.plex.cache.player
+dev.plex.cache.sql
 dev.plex.command
 dev.plex.command.annotation
+dev.plex.command.blocker
 dev.plex.command.exception
 dev.plex.command.impl
 dev.plex.command.source
@@ -15,8 +19,10 @@ dev.plex.listener.impl
 dev.plex.menu
 dev.plex.module
 dev.plex.module.exception
+dev.plex.module.loader
 dev.plex.player
 dev.plex.punishment
+dev.plex.punishment.extra
 dev.plex.rank
 dev.plex.rank.enums
 dev.plex.services
@@ -24,5 +30,6 @@ dev.plex.services.impl
 dev.plex.storage
 dev.plex.util
 dev.plex.util.adapter
+dev.plex.util.item
 dev.plex.util.menu
 dev.plex.world

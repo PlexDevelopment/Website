@@ -54,6 +54,12 @@ const config = {
        position: 'left',
        label: 'Compiling',
      },
+      {
+       type: 'doc',
+       docId: 'permissions',
+       position: 'left',
+       label: 'Permissions',
+     },
      {
        position: 'left',
        label: 'Javadocs',
@@ -84,6 +90,10 @@ const config = {
       {
         label: 'Compiling',
         to: '/docs/compiling',
+      },
+      {
+        label: 'Permissions',
+        to: '/docs/permissions',
       },
       {
         label: 'Javadocs',

@@ -35,14 +35,19 @@ const sidebars = {
       id: 'compiling',
     },
     {
+      type: 'doc',
+      label: 'Permissions',
+      id: 'permissions',
+    },
+    {
       type: 'category',
-      label: 'Customization',
-      items: ['customization/config', 'customization/messages'],
+      label: 'Configuration files',
+      items: ['customization/config', 'customization/messages', `customization/commandblocker`],
     },
     {
       type: 'category',
       label: 'Modules',
-      items: ['modules/introduction', 'modules/libsdisguises'],
+      items: ['modules/introduction', 'modules/bukkittelnet', 'modules/httpd', 'modules/libsdisguises'],
     },
     {
       type: 'doc',

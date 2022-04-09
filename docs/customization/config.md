@@ -33,14 +33,14 @@ chat:
   # If you are using permissions, you should turn this off and use Vault to handle prefixes with a different chat plugin
   enabled: true
   # The maximum amount of characters a player can have for their tag
-  max-tag-length: 16
+  # This does not include color tags such as <red> or <rainbow>
+  max-tag-length: 64
   # Color code for name color
   name-color: 'f'
 
-# Settings for commands relating to Plex
-commands:
-  # Should Plex use a "true op" system with ranks or only permission nodes
-  permissions: ranks
+# Should Plex use a "true op" system with ranks or only permission nodes
+# Options are "permissions" or "ranks"
+system: ranks
 
 data:
   central:
@@ -57,26 +57,136 @@ data:
     port: 6379
     password: ""
 
+# Mob limiter / Entity wiping config
+# All entities listed here will NOT be wiped upon wiping entities
+# By default this includes all mobs, as the mobpurge command can be used to purge mobs.
+entitywipe_list:
+  - "ITEM_FRAME"
+  - "AXOLOTL"
+  - "BAT"
+  - "BEE"
+  - "BLAZE"
+  - "CAT"
+  - "CAVE_SPIDER"
+  - "CHICKEN"
+  - "COD"
+  - "COW"
+  - "CREEPER"
+  - "DOLPHIN"
+  - "DONKEY"
+  - "DROWNED"
+  - "ELDER_GUARDIAN"
+  - "ENDER_DRAGON"
+  - "ENDERMAN"
+  - "ENDERMITE"
+  - "EVOKER"
+  - "FOX"
+  - "GHAST"
+  - "GIANT"
+  - "GLOW_SQUID"
+  - "GOAT"
+  - "GUARDIAN"
+  - "HOGLIN"
+  - "HORSE"
+  - "HUSK"
+  - "ILLUSIONER"
+  - "IRON_GOLEM"
+  - "LLAMA"
+  - "MAGMA_CUBE"
+  - "MULE"
+  - "MUSHROOM_COW"
+  - "OCELOT"
+  - "PANDA"
+  - "PARROT"
+  - "PHANTOM"
+  - "PIG"
+  - "PIGLIN"
+  - "PIGLIN_BRUTE"
+  - "PILLAGER"
+  - "POLAR_BEAR"
+  - "RABBIT"
+  - "RAVAGER"
+  - "SALMON"
+  - "SHEEP"
+  - "SHULKER"
+  - "SILVERFISH"
+  - "SKELETON"
+  - "SKELETON_HORSE"
+  - "SLIME"
+  - "SNOWMAN"
+  - "SPIDER"
+  - "SQUID"
+  - "STRAY"
+  - "STRIDER"
+  - "TRADER_LLAMA"
+  - "TROPICAL_FISH"
+  - "TURTLE"
+  - "VEX"
+  - "VILLAGER"
+  - "VINDICATOR"
+  - "WANDERING_TRADER"
+  - "WITCH"
+  - "WITHER"
+  - "WITHER_SKELETON"
+  - "WOLF"
+  - "ZOGLIN"
+  - "ZOMBIE"
+  - "ZOMBIE_HORSE"
+  - "ZOMBIE_VILLAGER"
+  - "ZOMBIFIED_PIGLIN"
+  - "PUFFERFISH"
+
+# Automatically wipe the specified entities
+autowipe:
+  # Should we automatically wipe entities?
+  enabled: true
+  # How often, in seconds, to automatically wipe entities. Default is 5 minutes.
+  interval: 300
+  # Entities to automatically wipe
+  entities:
+    - "DROPPED_ITEM"
+
+# Should we allow drops from players?
+allowdrops: true
+
+# What blocks should be blocked?
+blockedBlocks:
+  - "SPAWNER"
+  - "STRUCTURE_BLOCK"
+  - "JIGSAW"
+
+# What entities should be blocked?
+blockedEntities:
+  - "WITHER"
+  - "ENDER_DRAGON"
+  - "MINECART_TNT"
+
 # See https://plex.us.org/docs/customization/config#worlds for documentation
+# These gamerules apply to all worlds on the server
+global_gamerules:
+  - "doWeatherCycle;true"
+  - "doDaylightCycle;true"
+  - "doMobSpawning;false"
+  - "keepInventory;true"
+  - "doFireTick;false"
+  - "doMobLoot;false"
+  - "mobGriefing;false"
+  - "doTileDrops;false"
+  - "commandBlockOutput;false"
+  - "naturalRegeneration;true"
+  - "announceAdvancements;false"
+  - "showDeathMessages;false"
+  - "sendCommandFeedback;false"
+
 worlds:
   flatlands:
     name: "Flatlands"
     permission: "plex.world.flatlands"
     noEdit: "&cYou can't edit this world!"
     gameRules:
+      # The gamerules here override the global gamerules
       - "doWeatherCycle;false"
       - "doDaylightCycle;false"
-      - "doMobSpawning;false"
-      - "keepInventory;true"
-      - "doFireTick;false"
-      - "doMobLoot;false"
-      - "mobGriefing;false"
-      - "doTileDrops;false"
-      - "commandBlockOutput;false"
-      - "naturalRegeneration;true"
-      - "announceAdvancements;false"
-      - "showDeathMessages;false"
-      - "sendCommandFeedback;false"
     parameters:
       grass_block: 1
       dirt: 32
@@ -91,17 +201,6 @@ worlds:
     gameRules:
       - "doWeatherCycle;false"
       - "doDaylightCycle;false"
-      - "doMobSpawning;false"
-      - "keepInventory;true"
-      - "doFireTick;false"
-      - "doMobLoot;false"
-      - "mobGriefing;false"
-      - "doTileDrops;false"
-      - "commandBlockOutput;false"
-      - "naturalRegeneration;true"
-      - "announceAdvancements;false"
-      - "showDeathMessages;false"
-      - "sendCommandFeedback;false"
     parameters:
       grass_block: 1
       dirt: 32
@@ -116,22 +215,14 @@ worlds:
     gameRules:
       - "doWeatherCycle;false"
       - "doDaylightCycle;false"
-      - "doMobSpawning;false"
-      - "keepInventory;true"
-      - "doFireTick;false"
-      - "doMobLoot;false"
-      - "mobGriefing;false"
-      - "doTileDrops;false"
-      - "commandBlockOutput;false"
-      - "naturalRegeneration;true"
-      - "announceAdvancements;false"
-      - "showDeathMessages;false"
-      - "sendCommandFeedback;false"
     parameters:
       grass_block: 1
       dirt: 32
       stone: 16
       bedrock: 1
+
+# What branch should Plex fetch updates from?
+update_branch: master
 
 # Additional logging for debugging
 debug: false
@@ -155,31 +246,31 @@ A list of players who will show up as a masterbuilder.
 A list of players who will show up as an owner.
 
 ## Banning
-### banning.message
-This message will appear whenever a player tries to join the server, but is banned. You can use any color coding you would like here.
+### ban_url
+The URL to be used when a player sees the ban message. The full ban message can be changed in `messages.yml`.
 
 ## Chat
 ### chat.enabled
-Default: `true`
+**Default:** `true`
 Determines if the chat system should be enabled. It's useful to turn this off if you're using permissions and want to use prefixes from another plugin instead.
 
 ### chat.max_tag_length
-Default: `16`
+**Default:** `64`
 The maximum length a tag may be in game.
 
 ### chat.name-color
-Default: `f`
+**Default:** `f`
 The default color a tag should be if a player doesn't specify any colors.
 
-## Commands
-### comamnds.permissions
+## System
+### system
 **Options:** `ranks` or `permissions`
 
 This determines how Plex's command system works. If `ranks` is selected, Plex will use a ranking system and give all players operator status. If `permissions` is selected, no players are given operator. Instead, every command will have a permission attached to it which can be assigned in any permission system.
 
 ## Data
 ### data.central.storage
-**Options**: `sqlite`, `mariadb`, `mongodb`
+**Options:** `sqlite`, `mariadb`, `mongodb`
 
 Select which database software you would like to use. `sqlite` is the default. Note that if you change which data storage you use, no data will be transferred.
 
@@ -199,12 +290,12 @@ This is the port for whichever database software you use. Note that `sqlite` doe
 This is the name for whichever database software you use. Note that `sqlite` does not require a name.
 
 ### data.side.enabled
-**Options**: `true` / `false`
+**Options:** `true` / `false`
 
 This will enable Plex's Redis functionality.
 
 ### data.side.auth
-**Options**: `true` / `false`
+**Options:** `true` / `false`
 
 This is whether authentication mode for Redis is turned on or not.
 
@@ -221,6 +312,36 @@ This is the port that Redis is listening on. This is requird for Redis to work.
 ### data.side.password
 This is the password for your Redis instance. Note that this can be left blank if authentication is turned off.
 
+## Entity wiping
+### entitywipe_list
+All items in the list will not be wiped. By default, this includes all mobs as these can be purged with the `mobpurge` command.
+
+## Autowiping
+### autowipe.enabled
+**Options:** `true` / `false`
+Should autowiping be enabled?
+
+### autowipe.interval
+**Default:** 300
+How often, in seconds, to automatically wipe entities. Default is 5 minutes.
+
+### autowipe.entities
+A list of entities to automatically wipe.
+
+### allowdrops
+**Options:** `true` / `false`
+Should drops be allowed at all?
+
+## Blocking
+### blockedBlocks
+A list of blocks that should be blocked.
+
+### blockedEntities
+A list of entities that should be blocked.
+
+## Global gamerules
+### global_gamerules
+These gamerules apply to all worlds on the server. Gamerules in the generated worlds will override the global gamerules.
 
 ## Worlds
 An infinite amount of worlds can be generated from the configuration file. A few are automatically generated by default. The format for generating new worlds is as follows:
@@ -234,17 +355,6 @@ An infinite amount of worlds can be generated from the configuration file. A few
     gameRules:
       - "doWeatherCycle;false"
       - "doDaylightCycle;false"
-      - "doMobSpawning;false"
-      - "keepInventory;true"
-      - "doFireTick;false"
-      - "doMobLoot;false"
-      - "mobGriefing;false"
-      - "doTileDrops;false"
-      - "commandBlockOutput;false"
-      - "naturalRegeneration;true"
-      - "announceAdvancements;false"
-      - "showDeathMessages;false"
-      - "sendCommandFeedback;false"
     parameters:
       grass_block: 1
       dirt: 32
@@ -256,6 +366,10 @@ Note that in the `parameters` section, this is how the world should actually be 
 For a list of Ranks and Titles, you can refer to the Javadocs: [Ranks](https://docs.plex.us.org/javadocs/dev/plex/rank/enums/Rank.html), [Title](https://docs.plex.us.org/javadocs/dev/plex/rank/enums/Title.html).
 
 The gamerule section is what gamerules are set for the world by default. The syntax is the official gamerule name, a semicolon, and either `true` or `false`.
+
+## Updates
+update_branch
+The branch to use for update checking.
 
 ## Debugging
 **Options:** `true` / `false`
