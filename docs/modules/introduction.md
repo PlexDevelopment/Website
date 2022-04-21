@@ -11,5 +11,5 @@ Below is a list of current modules
 | Name           | Versions  |
 | -------------- | --------- |
 | BukkitTelnet   | 1.0       |
-| HTTPD          | 1.0       |
+| HTTPD          | 1.0.2     |
 | LibsDisguises  | 1.0       |

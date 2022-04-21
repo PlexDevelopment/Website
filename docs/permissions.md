@@ -29,6 +29,8 @@ This page is a comprehensive list of all of Plex's permission nodes.
 | namehistory        | plex.namehistory        | Get the name history of a player                                                                |
 | notes              | plex.notes              | Manage notes for a player                                                                       |
 | plex               | plex.plex               | Show information about Plex or reload it                                                        |
+| plex               | plex.reload             | Reload Plex                                                                                     |
+| plex               | plex.modules.reload     | Reload Plex's modules                                                                           |
 | punishments        | plex.punishments        | Opens the Punishments GUI                                                                       |
 | rawsay             | plex.rawsay             | Displays a message to everyone                                                                  |
 | smite              | plex.smite              | Someone being a little bitch? Smite them down...                                                |
@@ -41,6 +43,8 @@ This page is a comprehensive list of all of Plex's permission nodes.
 | unfreeze           | plex.unfreeze           | Unfreeze a player                                                                               |
 | unmute             | plex.unmute             | Unmute a player                                                                                 |
 | world              | plex.world              | Teleport to a world.                                                                            |
+|                    |                         |                                                                                                 |
+| Enter adminworld   | plex.adminworld.enter   | Allows entering the adminworld                                                                  |
 
 ## BukkitTelnet Module
 | Permission              | Description                                                 |

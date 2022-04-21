@@ -18,6 +18,8 @@ server:
   colorize_motd: true
   sample:
     - "&cForums: https://forum.plex.us.org"
+  # What timezone should various messages appear in (e.g. ban message end date)
+  timezone: Etc/UTC
 
 titles:
   masterbuilders: [ ]
@@ -35,8 +37,8 @@ chat:
   # The maximum amount of characters a player can have for their tag
   # This does not include color tags such as <red> or <rainbow>
   max-tag-length: 64
-  # Color code for name color
-  name-color: 'f'
+  # Color tag for name color
+  name-color: '<white>'
 
 # Should Plex use a "true op" system with ranks or only permission nodes
 # Options are "permissions" or "ranks"
@@ -150,13 +152,13 @@ autowipe:
 allowdrops: true
 
 # What blocks should be blocked?
-blockedBlocks:
+blocked_blocks:
   - "SPAWNER"
   - "STRUCTURE_BLOCK"
   - "JIGSAW"
 
 # What entities should be blocked?
-blockedEntities:
+blocked_entities:
   - "WITHER"
   - "ENDER_DRAGON"
   - "MINECART_TNT"
@@ -231,12 +233,18 @@ debug: false
 ## Server
 ### server.name
 The name of your server goes here and is used throughout Plex.
+
 ### server.motd
 The text here will appear on the server list.
+
 ### server.colorize_motd
 This determines if the message of the day should randomly be colorized. You can disable this option and manually colorize your MOTD.
+
 ### server.sample
 This lets you specify a custom message under the player count in the server list.
+
+## server.timezone
+This lets you customize which timezone various messages appear in (e.g. ban message end date)
 
 ## Titles
 ### titles.masterbuilders
@@ -259,7 +267,7 @@ Determines if the chat system should be enabled. It's useful to turn this off if
 The maximum length a tag may be in game.
 
 ### chat.name-color
-**Default:** `f`
+**Default:** `<white>`
 The default color a tag should be if a player doesn't specify any colors.
 
 ## System
@@ -333,10 +341,10 @@ A list of entities to automatically wipe.
 Should drops be allowed at all?
 
 ## Blocking
-### blockedBlocks
+### blocked_blocks
 A list of blocks that should be blocked.
 
-### blockedEntities
+### blocked_entities
 A list of entities that should be blocked.
 
 ## Global gamerules

@@ -178,8 +178,15 @@ removedMobs: "<red>{0} - Removed {1} mobs"
 autoWipeDisabled: "<gray>Item wiping is currently disabled in the config!"
 allowDropsDisabled: "<gray>No longer allowing drops from players."
 allowDropsEnabled: "<gray>Now allowing drops from players."
-blockedCommandColor: "<gray>"
-commandBlocked: "That command is blocked."
+commandBlocked: "<gray>That command is blocked."
+# 0 - The command sender
+# 1 - The message being said
+sayMessage: "<blue>[Server: {0}] {1}"
+# 0 - The command sender
+# 1 - The message being said
+consoleSayMessage: "<gray>[Console: {0}] <white>{1}"
+# 0 - The number attempted to be parsed
+unableToParseNumber: "<red>Unable to parse {0} as a number!"
 ```
 
 ## MiniMessage
