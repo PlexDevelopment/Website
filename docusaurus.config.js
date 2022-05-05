@@ -23,7 +23,7 @@ const config = {
   ({
     docs: {
       sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/plexusorg/docs/tree/master',
+          editUrl: 'https://github.com/plexusorg/Website/tree/master',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
