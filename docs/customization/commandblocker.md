@@ -3,7 +3,7 @@ id: commandblocker
 title: Command Blocker
 ---
 
-# Introduction
+# Command Blocker
 Plex features an advanced command blocker with support for matching and RegEx statements. It is recommended that you use this only in conjunction with ranks. If you are using permissions, there is not as much of a need for a command blocker.
 
 ## Default file
@@ -77,4 +77,3 @@ commands:
 An example formatted entry in the `commands.yml` file would look like this:
 `"m:e:mail sendall:You cannot send messages to everyone on the server"`
 The `m` will match the `mail sendall` command. The `e` stands for everyone, so it will block this command for everyone. The last part is the message. If you use `_` as the blocked message, it will use the default message specified in `messages.yml`
-

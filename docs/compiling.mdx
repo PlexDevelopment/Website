@@ -6,7 +6,7 @@ title: Compiling Plex
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Introduction
+# Compiling
 Compiling Plex is straightforward as there are no dependencies that need to be added manually. Plex uses Gradle as the build system. All compiling instructions are in the ```build.gradle``` file. Note that you can download an already compiled version of Plex from the [CI Server](https://ci.plex.us.org).
 
 ## Prerequisites
@@ -17,7 +17,7 @@ Plex does not require, but recommends having Git installed on your computer. If 
 ## Using the command line
 First, clone the Plex source code from GitHub on to your computer using the following command.
 ```bash
-git clone https://github.com/PlexDevelopment/Plex
+git clone https://github.com/plexusorg/Plex
 ```
 
 :::note
@@ -32,7 +32,7 @@ cd Plex-master
 
 Gradle is already included in the folder with Plex. Run the following command below based on your operating system to compile Plex.
 <Tabs>
-<TabItem value="macOS" label = "macOS" default>
+<TabItem value="macOS" label="macOS" default>
 
 	./gradlew build
 
@@ -49,7 +49,7 @@ Gradle is already included in the folder with Plex. Run the following command be
 </TabItem>
 </Tabs>
 
-You should receive a message indicating the compilation was successful. The JAR file is located at ```build/libs/Plex.jar```
+You should receive a message indicating the compilation was successful. The JAR files for the Server, API, and Proxy are located in the `build/libs` folder.
 
 Plex has no external dependencies and can be used right away after compilation. Plex works on Minecraft 1.18.2. You also must be running Java 17 on the server itself.
 

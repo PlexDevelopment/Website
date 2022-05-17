@@ -5,6 +5,7 @@ title: LibsDisguises
 
 # LibsDisguises
 The LibsDisguises module adds two new commands: `undisguiseall` and `disguisetoggle`.
+
 ## Commands
 ### undisguiseall
 The `undisguiseall` command disguises all non-admins. You can optionally add `-a` to undisguise all players including admins. If your server is using permissions, the permission to bypass being undisguised is `plex.libsdisguises.bypass`. This permission will not bypass `-a`. The permission to use the command itself is `plex.libsdisguises.undisguiseall`

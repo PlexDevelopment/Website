@@ -3,7 +3,7 @@ id: redis
 title: Configuring Redis
 ---
 
-# Introduction
+# Redis
 This page will show you how to setup and configure Redis for Plex. This tutorial assumes a moderate amount of computer knowledge. Please note that setting up Redis is optional. It offers many performance improvements, but can be dangerous if improperly configured.
 
 ## Using Pterodactyl

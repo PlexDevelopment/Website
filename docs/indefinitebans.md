@@ -3,7 +3,7 @@ id: indefinitebans
 title: Indefinite Bans
 ---
 
-# Introduction
+# Indefinite Bans
 Similar to TotalFreedomMod, Plex has indefinite bans. Indefinite bans are reserved for players who should not automatically be unbanned. Anyone who has access to the `indefbans.yml` file can add indefinite bans. If you are using Redis, all indefinite bans will be uploaded to Redis on startup. From that point on, indefinite bans will be fetched from Redis instead of the `indefbans.yml` file. **Redis is NOT required to use indefinite bans.** If you do not use Redis, Plex will fetch indefinite bans from the `indefbans.yml` file. No matter which medium you use, you will always add new entries to the `indefbans.yml` file. Note that there is no in-game command for adding or removing indefinite bans.
 
 ## Default file

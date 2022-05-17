@@ -3,7 +3,7 @@ id: httpd
 title: HTTPD
 ---
 
-# Introduction
+# HTTPD
 The HTTPD module sets up a basic web server to display information from Plex.
 
 ## Endpoints

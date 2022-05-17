@@ -3,7 +3,7 @@ id: permissions
 title: Permissions
 ---
 
-# Introduction
+# Permissions
 This page is a comprehensive list of all of Plex's permission nodes.
 
 ## Plex
