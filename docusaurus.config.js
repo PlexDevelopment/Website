@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Plex',
   tagline: 'Welcome to the website and documentation for Plex!',
-  url: 'https://plex.us.org',
+  url: 'https://docs.plex.us.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
