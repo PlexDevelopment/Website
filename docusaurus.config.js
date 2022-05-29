@@ -62,8 +62,13 @@ const config = {
      },
      {
        position: 'left',
-       label: 'Javadocs',
-       to: 'pathname:///javadocs',
+       label: 'Javadocs (Server)',
+       to: 'pathname:///javadoc/server',
+     },
+     {
+       position: 'left',
+       label: 'Javadocs (API)',
+       to: 'pathname:///javadoc/api',
      },
      {
        position: 'left',
@@ -96,8 +101,12 @@ const config = {
         to: '/docs/permissions',
       },
       {
-        label: 'Javadocs',
-        to: 'pathname:///javadocs',
+        label: 'Javadocs (Server)',
+        to: 'pathname:///javadoc/server',
+      },
+      {
+        label: 'Javadocs (API)',
+        to: 'pathname:///javadoc/api',
       },
       {
         label: 'Downloads',

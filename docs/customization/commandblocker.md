@@ -22,7 +22,7 @@ The default `commands.yml` file is below.
 #   - The ranks are "e" for everyone, "s" for senior admin, and "a" for admin
 #   - MATCHING MODE: The command is just the command without slashes. Optional arguments are specified as well. It also accepts full plugins via specifying the plugin name followed by a ":" (e.g. "viaversion:")
 #   - REGEX MODE: The command is regex that matches the desired command. It matches case insensitively.
-#   - Finally the block message. MUST NOT CONTAIN ":". Use _ to use the default command blocked message as specified in messages.yml, or you can optionally put your own in
+#   - Finally the block message MUST NOT CONTAIN ":". Use _ to use the default command blocked message as specified in messages.yml, or you can optionally put your own in
 #
 # So these would be valid:
 #   - "m:e:mail sendall:You cannot send messages to everyone on the server"
@@ -64,9 +64,15 @@ commands:
   - "m:e:weather:_"
   - "m:e:worldborder:<gray>The worldborder does not need to be changed. This command is disabled."
   - "r:a:^(co|core|coreprotect) (rb|rollback|l|lookup|rl|reload):_"
-  - "r:a:^(gamemode|gm) [^ ]+ .*:<gray>You cannot change the gamemode of other players!"
-  - "r:a:^(gamemode|gm|egamemode|egm) (spectator|sp|3):<gray>You cannot use spectator mode!"
   - "r:e:^[A-z]*:[A-z]*::<gray>Plugin specific commands are disabled."
+
+# These commands will be blocked when a player is muted
+block_on_mute:
+  - me
+  - say
+  - msg
+  - reply
+  - mail
 ```
 
 ## The symbols

@@ -142,20 +142,20 @@ prefixCleared: "<aqua>Your prefix has been cleared."
 otherPrefixCleared: "<aqua>You have cleared {0}'s prefix."
 # 0 - The new prefix
 prefixSetTo: "<aqua>Your prefix has been set to {0}"
-# 0 - The amount of players whose edits are blocked
-blockedEditsSize: "Blocked block modification abilities for {0} players."
-# 0 - The amount of players whose edits are unblocked
-unblockedEditsSize: "Unblocked all block modification abilities for {0} players."
-# 0 - The command sender
-# 1 - The player name
-blockingEditFor: "<red>{0} - Blocking block modification abilities for {1}"
-# 0 - The command sender
-# 1 - The player name
-unblockingEditFor: "<aqua>{0} - Unblocking block modification abilities for {1}"
-yourEditsHaveBeenBlocked: "<gray>Your block modification abilities have been blocked."
-yourEditsHaveBeenUnblocked: "<gray>Your block modification abilities have been restored."
+# 0 - The action (blocked / unblocked)
+# 1 - The amount of players
+blockeditSize: "<gray>{0} all block modification abilities for {1} players."
+# The action (blocked or restored)
+editsModified: "<gray>Your block modification abilities have been {0}."
+listOfPlayersBlocked: "<gray>The following have block modification abilities restricted:"
 # 0 - The player name
 editsBlocked: "<gray>Blocked block modification abilities for {0}"
+# 0 - The command sender
+# 1 - The player name
+blockingEdits: "<red>{0} - Blocking block modification abilities for {1}"
+# 0 - The command sender
+# 1 - The player
+unblockingEdits: "<aqua>{0} - Unblocking block modification abilities for {1}"
 # 0 - The player name
 editsUnblocked: "<gray>Unblocked block modification abilities for {0}"
 # 0 - The command sender
@@ -176,8 +176,6 @@ noRemovedEntities: "<gray>No entities were removed."
 # 1 - Number of mobs removed
 removedMobs: "<red>{0} - Removed {1} mobs"
 autoWipeDisabled: "<gray>Item wiping is currently disabled in the config!"
-allowDropsDisabled: "<gray>No longer allowing drops from players."
-allowDropsEnabled: "<gray>Now allowing drops from players."
 commandBlocked: "<gray>That command is blocked."
 # 0 - The command sender
 # 1 - The message being said
@@ -187,6 +185,14 @@ sayMessage: "<blue>[Server: {0}] {1}"
 consoleSayMessage: "<gray>[Console: {0}] <white>{1}"
 # 0 - The number attempted to be parsed
 unableToParseNumber: "<red>Unable to parse {0} as a number!"
+noNotes: "<red>This player has no notes!"
+noteAdded: "<green>Note added."
+noteNotFound: "<red>A note with this ID could not be found."
+# 0 - The ID of the note removed
+removedNote: "<green>Removed note with ID: {0}"
+# 0 - The number of notes cleared
+clearedNotes: "<green>Cleared {0} notes."
+invalidToggle: "<red>That is not a valid toggle."
 ```
 
 ## MiniMessage

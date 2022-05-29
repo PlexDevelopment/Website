@@ -10,10 +10,10 @@ This page will show you how to setup and configure Redis for Plex. This tutorial
 If you are using Pterodactyl, setting up Redis is easy. You will need to download and add the Redis egg, which requires administrator privileges. If you are not an administrator, you may request an administrator to set up Redis for you.
 
 ### Setup the Redis egg
-Download the Redis egg from [here](https://raw.githubusercontent.com/ign-gg/Pterodactyl-Eggs/master/database/redis/redis-6/egg-redis-6.json). You can right click on the page and click "Save As". Please ensure that the filename ends in .json
+Right click on [this link](https://docs.plex.us.org/egg-redis-7.json) and click "Save As". Please ensure that the filename ends in .json
 
 On your Pterodactyl admin page, click on the "Nests" from the sidebar. Click the blue "Create New" button and enter "Databases" for the name.
-Then, click on the green "Import Egg" button. Import the `egg-redis-6.json` file you just downloaded and make sure the "Associated Nest" is set to "Databases".
+Then, click on the green "Import Egg" button. Import the `egg-redis-7.json` file you just downloaded and make sure the "Associated Nest" is set to "Databases".
 
 ### Configure the allocations
 Click on the "Nodes" tab from the sidebar. Click on the node you would like to add Redis. Click on the "Allocation" tab. On the right, you will see a box that says "Assign New Allocations". For the IP Address, enter `172.18.0.1`, and for the port enter `6380`.

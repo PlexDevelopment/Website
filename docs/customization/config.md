@@ -10,7 +10,7 @@ This page will show you how to modify the configuration file. The configuration 
 Below is the default `config.yml` file when Plex is loaded for the first time.
 ```yaml title=/plugins/Plex/config.yml
 # Plex Configuration File
-# For documentation, please visit: https://plex.us.org
+# For documentation, please visit: https://docs.plex.us.org
 
 server:
   name: "Plexus"
@@ -148,9 +148,6 @@ autowipe:
   entities:
     - "DROPPED_ITEM"
 
-# Should we allow drops from players?
-allowdrops: true
-
 # What blocks should be blocked?
 blocked_blocks:
   - "SPAWNER"
@@ -163,7 +160,7 @@ blocked_entities:
   - "ENDER_DRAGON"
   - "MINECART_TNT"
 
-# See https://plex.us.org/docs/customization/config#worlds for documentation
+# See https://docs.plex.us.org/docs/customization/config#worlds for documentation
 # These gamerules apply to all worlds on the server
 global_gamerules:
   - "doWeatherCycle;true"
