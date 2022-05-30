@@ -8,7 +8,7 @@ This page is a comprehensive list of all of Plex's permission nodes.
 
 ## Plex
 | Command            | Permission                     | Description                                                                                     |
-|--------------------|--------------------------------|-------------------------------------------------------------------------------------------------|
+| ------------------ | ------------------------------ | ----------------------------------------------------------------------------------------------- |
 | adminchat          | plex.adminchat                 | Talk privately with other admins                                                                |
 | adminworld         | plex.adminworld                | Teleport to the adminworld                                                                      |
 | adventure          | plex.gamemode.adventure        | Set your own gamemode to adventure mode                                                         |
@@ -31,7 +31,6 @@ This page is a comprehensive list of all of Plex's permission nodes.
 | mute               | plex.mute                      | Mute a player on the server                                                                     |
 | namehistory        | plex.namehistory               | Get the name history of a player                                                                |
 | notes              | plex.notes                     | Manage notes for a player                                                                       |
-| plex               | plex.plex                      | Show information about Plex or reload it                                                        |
 | plex               | plex.redis                     | Tests your Redis database to ensure Plex can reach it                                           |
 | plex               | plex.reload                    | Reload Plex                                                                                     |
 | plex               | plex.modules.reload            | Reload Plex's modules                                                                           |
@@ -46,30 +45,51 @@ This page is a comprehensive list of all of Plex's permission nodes.
 | tag                | plex.tag                       | Set or clear your prefix                                                                        |
 | tag                | plex.tag.clear.others          | Clear another player's prefix                                                                   |
 | tempban            | plex.tempban                   | Temporarily ban a player                                                                        |
-| toggledrops        | plex.toggledrops               | Toggle immediately removing drops.                                                              |
+| toggle             | plex.toggle                    | Allows toggling various server aspects through a GUI                                            |
 | unban              | plex.unban                     | Unbans a player, offline or online                                                              |
 | unfreeze           | plex.unfreeze                  | Unfreeze a player                                                                               |
 | unmute             | plex.unmute                    | Unmute a player                                                                                 |
 | world              | plex.world                     | Teleport to a world.                                                                            |
 |                    |                                |                                                                                                 |
-| Enter adminworld   | plex.adminworld.enter          | Allows entering the adminworld                                                                  |
+| Enter adminworld   | plex.adminworld.enter          | Allows entering the adminworld                                                                  |                                                               |
 
 ## BukkitTelnet Module
-| Permission              | Description                                                 |
-|-------------------------|-------------------------------------------------------------|
-| plex.telnet.autoconnect | Allow automatically connecting to telnet without a password |
+| Permission              | Rank  | Description                                                 |
+| ----------------------- | ----- | ----------------------------------------------------------- |
+| plex.telnet.autoconnect | Admin | Allow automatically connecting to telnet without a password |
+
+## Guilds Module
+| Command       | Permission          | Rank | Description                                                   |
+| ------------- | ------------------- | ---- | ------------------------------------------------------------- |
+| guild         | plex.guilds.guild   | OP   | Guild menu                                                    |
+| guild chat    | plex.guilds.chat    | OP   | Toggles guild chat or sends a guild chat message              |
+| guild create  | plex.guilds.create  | OP   | Creates a guild with a specified name                         |
+| guild home    | plex.guilds.home    | OP   | Teleports to the guild home                                   |
+| guild info    | plex.guilds.info    | OP   | Shows the guild's information                                 |
+| guild invite  | plex.guilds.invite  | OP   | Invites a player to the guild                                 |
+| guild owner   | plex.guilds.owner   | OP   | Sets the guild owner                                          |
+| guild prefix  | plex.guilds.prefix  | OP   | Sets the guild's default prefix                               |
+| guild sethome | plex.guilds.sethome | OP   | Sets the guild's home                                         |
+| guild setwarp | plex.guilds.setwarp | OP   | Creates a new warp at player's location with a specified name |
+| guild warps   | plex.guilds.warps   | OP   | Displays a clickable list of warps                            |
+| guild warp    | plex.guild.warp     | OP   | Warps to a specified guild warp                               |
 
 ## HTTPD Module
-| Permission                    | Description                                                                                   |
-|-------------------------------|-----------------------------------------------------------------------------------------------|
-| plex.httpd.admins.access      | Allows seeing IP addresses of admins. Anyone can view the page regardless of permissions      |
-| plex.httpd.indefbans.access   | Allows accessing the indefinite bans. This permission is required to view the page at all.    |
-| plex.httpd.punishments.access | Allows seeing IP addresses of punishments. Anyone can view the page regardless of permissions |
-| plex.httpd.schematics.upload  | Allows uploading schematics to the HTTPD if the permission system is enabled.                 |
+| Permission                    | Rank  | Description                                                                                   |
+| ----------------------------- | ----- | --------------------------------------------------------------------------------------------- |
+| plex.httpd.admins.access      | Admin | Allows seeing IP addresses of admins. Anyone can view the page regardless of permissions      |
+| plex.httpd.indefbans.access   | Admin | Allows accessing the indefinite bans. This permission is required to view the page at all.    |
+| plex.httpd.punishments.access | Admin | Allows seeing IP addresses of punishments. Anyone can view the page regardless of permissions |
+| plex.httpd.schematics.upload  | Admin | Allows uploading schematics to the HTTPD if the permission system is enabled.                 |
 
 ## LibsDisguises Module
-| Command        | Permission                        | Description                                                                                   |
-|----------------|-----------------------------------|-----------------------------------------------------------------------------------------------|
-| disguisetoggle | plex.libsdisguises.disguisetoggle | Toggle LibsDisguises                                                                          |
-| undisguiseall  | plex.libsdisguises.undisguiseall  | Undisguise all players                                                                        |
-| undisguiseall  | plex.libsdisguises.bypass         | Bypass being undisguised. This can be overridden regardless of permission with the `-a` flag. |
+| Command        | Permission                        | Rank  | Description                                                                                     |
+| -------------- | --------------------------------- | ----- | ----------------------------------------------------------------------------------------------- |
+| disguisetoggle | plex.libsdisguises.disguisetoggle | Admin | Toggle LibsDisguises                                                                            |
+| undisguiseall  | plex.libsdisguises.undisguiseall  | Admin | Undisguise all players                                                                          |
+| undisguiseall  | plex.libsdisguises.bypass         | Admin | Bypass being undisguised. This can be overridden regardless of permission with the \`-a\` flag. |
+
+## NUSH Module
+| Command | Permission        | Rank  | Description            |
+| ------- | ----------------- | ----- | ---------------------- |
+| nush    | plex.nush.command | Admin | Toggle NUSH on or off. |
