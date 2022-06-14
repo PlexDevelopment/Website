@@ -406,7 +406,6 @@ The repo to use for update checking.
 update_branch
 The branch to use for update checking.
 
-
 ## Debugging
 **Options:** `true` / `false`
 
