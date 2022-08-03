@@ -31,7 +31,7 @@ This page is a comprehensive list of all of Plex's permission nodes. Note that s
 | lockup              | plex.lockup                    | Admin        | Lockup a player on the server                                                                   |
 | masterbuilderworld  | plex.masterbuilderworld        | OP           | Teleport to the masterbuilderworld                                                              |
 | mobpurge            | plex.mobpurge                  | Admin        | Purge all mobs.                                                                                 |
-| mute                | plex.mute                      | OP           | Mute a player on the server                                                                     |
+| mute                | plex.mute                      | Admin        | Mute a player on the server                                                                     |
 | namehistory         | plex.namehistory               | OP           | Get the name history of a player                                                                |
 | notes               | plex.notes                     | Admin        | Manage notes for a player                                                                       |
 | opall               | N/A                            | Admin        | Op everyone on the server                                                                       |

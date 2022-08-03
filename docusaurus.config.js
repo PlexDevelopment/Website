@@ -123,7 +123,7 @@ const config = {
       },
       {
         label: 'Discord',
-        href: 'https://discord.gg/HZsdUnsRKc',
+        href: 'https://discord.gg/MzjRjFAcrZ',
       },
       ],
     },
@@ -145,7 +145,7 @@ const config = {
       ],
     },
     ],
-    copyright: `Copyright © ${new Date().getFullYear()} Plex. Symbols from <a href="https://fontawesome.com/license">FontAwesome</a>. Built with Docusaurus.`,
+    copyright: `Copyright © ${new Date().getFullYear()} Plexus Development. Symbols from <a href="https://fontawesome.com/license">FontAwesome</a>. Built with Docusaurus.`,
   },
   prism: {
     theme: lightCodeTheme,
