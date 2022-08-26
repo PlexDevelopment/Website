@@ -42,6 +42,7 @@ chat:
 
 # Should Plex use a "true op" system with ranks or only permission nodes
 # Options are "permissions" or "ranks"
+# NOTE: If you are using a proxy such as BungeeCord or Velocity, it is highly recommended to use permissions
 system: ranks
 
 data:
@@ -290,7 +291,7 @@ The default color a tag should be if a player doesn't specify any colors.
 ### system
 **Options:** `ranks` or `permissions`
 
-This determines how Plex's command system works. If `ranks` is selected, Plex will use a ranking system and give all players operator status. If `permissions` is selected, no players are given operator. Instead, every command will have a permission attached to it which can be assigned in any permission system.
+This determines how Plex's command system works. If `ranks` is selected, Plex will use a ranking system and give all players operator status. If `permissions` is selected, no players are given operator. Instead, every command will have a permission attached to it which can be assigned in any permission system. It is **highly** recommended to use permissions if you are running Plex behind a proxy such as BungeeCord or Velocity. These proxies **rely** on permissions to give proper commands to players. On some misconfigured instances, if a player is opped, they may inherit *all* available permissions from the proxy.
 
 ## Data
 ### data.central.storage
