@@ -27,11 +27,12 @@ This page is a comprehensive list of all of Plex's permission nodes. Note that s
 | flatlands           | plex.flatlands                 | OP           | Teleport to the flatlands                                                                       |
 | freeze              | plex.freeze                    | Admin        | Freeze a player on the server                                                                   |
 | kick                | plex.kick                      | Admin        | Kicks a player                                                                                  |
+| list                | plex.list                      | OP           | Show a list of all online players                                                               |
 | localspawn          | plex.localspawn                | OP           | Teleport to the spawnpoint of the world you are in                                              |
 | lockup              | plex.lockup                    | Admin        | Lockup a player on the server                                                                   |
 | masterbuilderworld  | plex.masterbuilderworld        | OP           | Teleport to the masterbuilderworld                                                              |
 | mobpurge            | plex.mobpurge                  | Admin        | Purge all mobs.                                                                                 |
-| mute                | plex.mute                      | Admin        | Mute a player on the server                                                                     |
+| mute                | plex.mute                      | OP           | Mute a player on the server                                                                     |
 | namehistory         | plex.namehistory               | OP           | Get the name history of a player                                                                |
 | notes               | plex.notes                     | Admin        | Manage notes for a player                                                                       |
 | opall               | N/A                            | Admin        | Op everyone on the server                                                                       |
@@ -43,7 +44,9 @@ This page is a comprehensive list of all of Plex's permission nodes. Note that s
 | punishments         | plex.punishments               | Admin        | Opens the Punishments GUI                                                                       |
 | rank                | N/A                            | OP           | Displays your rank                                                                              |
 | rawsay              | plex.rawsay                    | Senior Admin | Displays a message to everyone                                                                  |
+| removeloginmessage  | plex.removeloginmessage        | Admin        | Remove your own (or someone else's) login message                                               |
 | say                 | plex.say                       | Admin        | Displays a message to everyone                                                                  |
+| setloginmessage     | plex.setloginmessage           | Admin        | Sets your (or someone else's) login message                                                     |
 | smite               | plex.smite                     | Admin        | Someone being a little bitch? Smite them down...                                                |
 | spectator           | plex.gamemode.spectator        | OP           | Set your own gamemode to spectator mode                                                         |
 | spectator           | plex.gamemode.spectator.others | Admin        | Set another player's gamemode to spectator mode                                                 |
