@@ -17,7 +17,6 @@ dev.plex.listener.impl
 dev.plex.menu
 dev.plex.module
 dev.plex.module.exception
-dev.plex.module.loader
 dev.plex.permission
 dev.plex.player
 dev.plex.punishment

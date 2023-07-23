@@ -29,6 +29,7 @@ banMessage: "<red>You have been banned! You may appeal at <gold>{0}.\n<red>Reaso
 # 1 - Appeal URL
 indefBanMessage: "<red>Your {0} is indefinitely banned! You may appeal at <gold>{1}."
 playerNotFound: "<red>Player not found!"
+specifyPlayer: "<red>You must specify a player!"
 worldNotFound: "<red>World not found!"
 # 0 - The world you have been teleported to
 playerWorldTeleport: "<aqua>You have been teleported to {0}."
@@ -135,6 +136,8 @@ disabled: "<gray>disabled."
 # 0 - The admin / staff member
 # 1 - The message
 adminChatFormat: '<dark_gray>[<blue>AdminChat<dark_gray>] <dark_red>{0} <gray>» <gold>{1}'
+# 0 - Whether it was toggled on or off
+adminChatToggled: '<gray>AdminChat was toggled {0}'
 # 0 - Maximum length, configured in config.yml
 maximumPrefixLength: "<red>The maximum length for a tag may only be {0}."
 prefixCleared: "<aqua>Your prefix has been cleared."
@@ -193,6 +196,17 @@ removedNote: "<green>Removed note with ID: {0}"
 # 0 - The number of notes cleared
 clearedNotes: "<green>Cleared {0} notes."
 invalidToggle: "<red>That is not a valid toggle."
+specifyLoginMessage: "<red>Please specify a login message."
+# 0 - The login message
+setOwnLoginMessage: "<gray>Your login message is now:<newline><gray>> <reset>{0}"
+# 0 - The player
+# 1 - The login message
+setOtherPlayersLoginMessage: "<gray>{0}'s login message is now:<newline><gray>> <reset>{1}"
+removedOwnLoginMessage: "<gray>Your login message has been removed."
+# 0 - The player
+removedOtherLoginMessage: "<gray>You removed {0}'s login message."
+nameRequired: "<red>Policy requires that you must state your player name in your login message. You can either do this by inserting your name or %player%."
+rankRequired: "<red>Policy requires that you must state your rank in your login message. You can do this by using %rank% in your login message."
 ```
 
 ## MiniMessage
