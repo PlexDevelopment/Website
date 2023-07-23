@@ -10,9 +10,9 @@ Below is a list of current modules
 
 | Name           | Versions  |
 | -------------- | --------- |
-| BukkitTelnet   | 1.1       |
-| HTTPD          | 1.1       |
-| Guilds         | 1.1       |
-| LibsDisguises  | 1.1       |
-| NUSH           | 1.1       |
-| TFMExtras      | 1.1       |
+| BukkitTelnet   | 1.3       |
+| HTTPD          | 1.3       |
+| Guilds         | 1.3       |
+| LibsDisguises  | 1.3       |
+| NUSH           | 1.3       |
+| TFMExtras      | 1.3       |
