@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('../../static/img/bolt-solid.svg').default,
     description: (
       <>
-        Plex was designed with performance in mind. Plex supports SQLite, MariaDB, and MongoDB out of the box.
+        Plex was designed with performance in mind. Plex supports SQLite or MariaDB out of the box.
         Plex also uses Redis for punishments instead of traditional YAML / JSON files.
       </>
     ),
@@ -23,12 +23,12 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Permissions and Ranks',
+    title: 'Permissions',
     Svg: require('../../static/img/dice-solid.svg').default,
     description: (
       <>
-        Plex allows you to use a traditional ranking system with "true op" or integrate with a permission system and "fake op".
-        Any standard permission plugin will integrate with Plex and can be used instead of ranks.
+        Plex allows you to use integrate with a permission system and "fake op" players. This allows server owners to have much more control over what is and isn't allowed.
+        Any Vault-compatible permission plugin will integrate with Plex and can be used instead of ranks.
       </>
     ),
   },

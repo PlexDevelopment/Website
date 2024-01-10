@@ -108,10 +108,6 @@ const config = {
       title: 'Community',
       items: [
       {
-        label: 'Forums',
-        href: 'https://forum.plex.us.org',
-      },
-      {
         label: 'Discord',
         href: 'https://discord.gg/MzjRjFAcrZ',
       },
@@ -125,10 +121,6 @@ const config = {
         href: 'https://github.com/plexusorg/Plex',
       },
       {
-        label: 'Blackout',
-        href: 'https://github.com/plexusorg/Blackout',
-      },
-      {
         label: 'Docs',
         href: 'https://github.com/plexusorg/Website',
       }
@@ -140,6 +132,7 @@ const config = {
   prism: {
     theme: prismThemes.github,
     darkTheme: prismThemes.dracula,
+    additionalLanguages: ['bash'],
   },
 }),
 };
