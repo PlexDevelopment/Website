@@ -80,3 +80,6 @@ side:
 ```
 
 Replace `your_secure_password_here` with the password you made for Redis. Now, Plex will use Redis for storing punishment data. Note that the JSON files are still made as a backup no matter what.
+
+### Firewall Configuraton
+If you are using a firewall, you may have to allow port `6380`. It is safe to allow connections from anywhere provided you have followed the documentation correctly.
