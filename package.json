@@ -15,8 +15,8 @@
     "dev": "docusaurus start"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.2.1",
-    "@docusaurus/preset-classic": "^3.2.1",
+    "@docusaurus/core": "^3.4.0",
+    "@docusaurus/preset-classic": "^3.4.0",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^1.2.1",
     "prism-react-renderer": "^2.1.0",
@@ -43,5 +43,5 @@
     "node": ">=18.0"
   },
   "description": "Plex Website and Documentation",
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.1.1"
 }
