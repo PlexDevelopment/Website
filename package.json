@@ -43,5 +43,5 @@
     "node": ">=18.0"
   },
   "description": "Plex Website and Documentation",
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.3.0"
 }
