@@ -10,7 +10,7 @@ This page will show you how to modify the configuration file. The configuration 
 Below is the default `config.yml` file when Plex is loaded for the first time.
 ```yaml title=/plugins/Plex/config.yml
 # Plex Configuration File
-# For documentation, please visit: https://docs.plex.us.org
+# For documentation, please visit: https://plex.us.org
 
 server:
   name: "Plexus"
@@ -21,14 +21,13 @@ server:
   # What timezone should various messages appear in (e.g. ban message end date)
   timezone: Etc/UTC
 
-titles:
-  masterbuilders: [ ]
-  owners:
-    - Telesphoreo
-
 # Ban message is customized in the messages.yml file. The URL to appeal at is below.
 banning:
   ban_url: "https://forum.plex.us.org"
+
+punishments:
+  mute-timer: 300
+  freeze-timer: 300
 
 chat:
   # Should the server use Plex's chat system? It is recommended to keep this on if you are using ranks.
@@ -40,14 +39,21 @@ chat:
   # Color tag for name color
   name-color: '<white>'
 
-# Should Plex use a "true op" system with ranks or only permission nodes
-# Options are "permissions" or "ranks"
-# NOTE: If you are using a proxy such as BungeeCord or Velocity, it is highly recommended to use permissions
-system: ranks
+# You can define colors for each group which will appear in the tab list
+colors:
+  admin: '<aqua>'
+  senior: '<light_purple>'
+  executive: '<blue>'
+  masterbuilder: '<dark_aqua>'
+
+# Login Messages
+loginmessages:
+  # Should the player be required to put their name in the login message?
+  name: true
 
 data:
   central:
-    storage: sqlite # Use mariadb, mongodb, or sqlite here
+    storage: sqlite # Use mariadb, or sqlite here
     user: ""
     password: ""
     hostname: 127.0.0.1
@@ -161,6 +167,15 @@ blocked_entities:
   - "ENDER_DRAGON"
   - "MINECART_TNT"
 
+# Limit entities per chunk
+entity_limit:
+  # Is the mob limit enabled?
+  mob_limit_enabled: true
+  # The maximum number of mobs allowed in a chunk
+  max_mobs_per_chunk: 50
+  # The available ceiling for the maximum number of mobs
+  mob_limit_ceiling: 500
+
 # See https://docs.plex.us.org/docs/customization/config#worlds for documentation
 # These gamerules apply to all worlds on the server
 global_gamerules:
@@ -197,15 +212,9 @@ worlds:
     name: "Admin World"
     entry:
       permission: "plex.world.adminworld.enter"
-      # Minimum rank requirement
-      requiredLevels:
-        - "Rank.ADMIN"
       message: "<red>You do not have permission to enter this world."
     modification:
       permission: "plex.world.adminworld.modify"
-      # Minimum rank requirement
-      requiredLevels:
-        - "Rank.ADMIN"
       message: "<red>You do not have permission to modify this world."
     gameRules:
       - "doWeatherCycle;false"
@@ -219,14 +228,9 @@ worlds:
     name: "MasterBuilder World"
     entry:
       permission: "plex.world.masterbuilderworld.enter"
-      requiredLevels:
-        - "Rank.OP"
       message: "<red>You do not have permission to enter this world."
     modification:
       permission: "plex.world.masterbuilderworld.modify"
-      requiredLevels:
-        # Title has no "minimum", so this will have to be their title
-        - "Title.MASTER_BUILDER"
       message: "<red>You do not have permission to modify this world."
     gameRules:
       - "doWeatherCycle;false"

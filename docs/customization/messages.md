@@ -25,24 +25,23 @@ The default `messages.yml` file is below.
 # 2 - Expiry
 # 3 - Punisher
 banMessage: "<red>You have been banned! You may appeal at <gold>{0}.\n<red>Reason: <gold>{1}\n<red>End date: <gold>{2}\n<red>Banned by: <gold>{3}"
+# 0 - Reason
+# 1 - Punisher
+kickMessage: "<red>You have been kicked! \n<red>Reason: <gold>{0}\n<red>Kicked by: <gold>{1}"
 # 0 - The type of indefinite ban
 # 1 - Appeal URL
 indefBanMessage: "<red>Your {0} is indefinitely banned! You may appeal at <gold>{1}."
+# 0 - The type of indefinite ban
+# 1 - Appeal URL
+# 2 - The reason
+indefBanMessageReason: "<red>Your {0} is indefinitely banned! You may appeal at <gold>{1}.\n<red>Reason: <gold>{2}"
 playerNotFound: "<red>Player not found!"
 specifyPlayer: "<red>You must specify a player!"
 worldNotFound: "<red>World not found!"
+# This will always be used for punishments where the sanctioning administrator has not provided a reason. Will ignore MiniMessage tags.
+noReasonProvided: "No reason provided."
 # 0 - The world you have been teleported to
 playerWorldTeleport: "<aqua>You have been teleported to {0}."
-# 0 - The sender who opped everyone
-oppedAllPlayers: "<aqua>{0} - Opped all players on the server"
-# 0 - The sender who de-opped everyone
-deoppedAllPlayers: "<aqua>{0} - De-opped all players on the server"
-# 0 - The person who is opping
-# 1 - The person who has been opped
-oppedPlayer: "<aqua>{0} - Opped {1}"
-# 0 - The person who is deopped
-# 1 - The person who has been deopped
-deoppedPlayer: "<red>{0} - Deopped {1}"
 # 0 - The person who is freezing
 # 1 - The person who has been frozen
 frozePlayer: "<red>{0} - Froze {1}"
@@ -55,14 +54,19 @@ mutedPlayer: "<red>{0} - Muted {1}"
 # 0 - The command sender
 # 1 - The person who has been unmuted
 unmutedPlayer: "<aqua>{0} - Unmuted {1}"
+invalidTimeFormat: "<red>Invalid time format. Use s, m, h, d, w, mo, or y (e.g., 1h30m)."
+timeMustBeFuture: "<red>The specified time must be in the future."
+# 0 - The command sender
+# 1 - The person who has been muted
+# 2 - The time that the person is muted for
+tempMutedPlayer: "<red>{0} - Muted {1} for {2}"
+maxTimeExceeded: "<red>The specified time must be under a week."
 # 0 - The person who is locking up
 # 1 - The person who has been locked up
 lockedUpPlayer: "<aqua>{0} - Locking up {1}"
 # 0 - The person who is unlocking
 # 1 - The person who has been unlocked
 unlockedPlayer: "<aqua>{0} - Unlocking {1}"
-# 0 - The rank required to use the command
-noPermissionRank: "<red>You must be at least {0} <red>to use this command!"
 # 0 - The permission node required to use the command
 noPermissionNode: "<red>You must have the permission: {0} <red>to use this command!"
 noPermissionInGame: "<red>You must be in console to use this command!"
@@ -126,6 +130,11 @@ playerFrozen: "<red>That player is already frozen!"
 playerMuted: "<red>That player is already muted!"
 playerLockedUp: "<red>That player is already locked up!"
 muted: "<red>You are currently muted - STFU!"
+pvpDisabled: "<red>PVP has been disabled!"
+chatIsOff: "<red>Chat is currently toggled off!"
+# 0 - The command sender
+# 1 - The set value of the chat toggle
+chatToggled: "<red>{0} - Toggled chat {1}"
 # 0 - The command sender
 # 1 - The player
 kickedPlayer: "<red>{0} - Kicking {1}"
@@ -134,8 +143,9 @@ toggleCommandSpy: "<gray>CommandSpy has been"
 enabled: "<gray>enabled."
 disabled: "<gray>disabled."
 # 0 - The admin / staff member
-# 1 - The message
-adminChatFormat: '<dark_gray>[<blue>AdminChat<dark_gray>] <dark_red>{0} <gray>» <gold>{1}'
+# 1 - The player's group's prefix if any
+# 2 - The message
+adminChatFormat: '<dark_gray>[<blue>AdminChat<dark_gray>] <dark_red>{0} {1} <gray>» <gold>{2}'
 # 0 - Whether it was toggled on or off
 adminChatToggled: '<gray>AdminChat was toggled {0}'
 # 0 - Maximum length, configured in config.yml
@@ -175,10 +185,27 @@ removedEntitiesOfType: "<gray>Removed {1} {2}"
 # 0 - Entity type that is invalid
 invalidEntityType: "<gray>Notice: Entity type {0} is invalid!"
 noRemovedEntities: "<gray>No entities were removed."
+# 0 - Number of mobs removed
+# 1 - Type of mob removed
+amountOfMobsRemoved: "<gray>{0} {1} removed."
+notAValidMob: "<red>That is not a valid mob."
+notAValidMobButValidEntity: "<red>That is a valid entity, but is not a valid mob."
 # 0 - The command sender
 # 1 - Number of mobs removed
 removedMobs: "<red>{0} - Removed {1} mobs"
 autoWipeDisabled: "<gray>Item wiping is currently disabled in the config!"
+# 0 - The boolean for whether the limit is enabled or disabled
+mobLimitToggle: "<gray>The mob limit has been {0}"
+# 0 - The amount that the mob limit has been set to
+mobLimitSet: "<gray>The mob limit has been set to: <em><white>{0}"
+# 0 - The boolean for whether the limit is enabled or disabled
+# 1 - The current amount of mobs in the world
+# 2 - The current set mob limit
+# 3 - Chunk x value
+# 4 - Chunk z value
+mobLimitStatus: "<gray>({0}<gray>) <em><white>{1} <reset><gray>/ <em><white>{2} <reset><gray>per chunk (<em><white>Chunk<gray>: <reset>{3}, {4}<gray>)"
+# 0 - The max set limit in config
+mobLimitCeiling: "<gray>The limit you have entered is too high. Defaulting to the ceiling value from config"
 commandBlocked: "<gray>That command is blocked."
 # 0 - The command sender
 # 1 - The message being said
@@ -207,6 +234,63 @@ removedOwnLoginMessage: "<gray>Your login message has been removed."
 removedOtherLoginMessage: "<gray>You removed {0}'s login message."
 nameRequired: "<red>Policy requires that you must state your player name in your login message. You can either do this by inserting your name or %player%."
 rankRequired: "<red>Policy requires that you must state your rank in your login message. You can do this by using %rank% in your login message."
+# 0 - The material name
+# 1 - The players who have the material in their inventory
+playersWithMaterial: "<gray>Players with {0} in their inventory: {1}"
+# 0 - The material name
+# 1 - The players who have the material in their inventory
+playersMaterialCleared: "<gray>{0} has been removed from the following players: {1}"
+nobodyHasThatMaterial: "<gray>No one online has that in their inventory."
+# 0 - The attempted material name
+materialNotFound: "<red>{0} is not a valid item/block name."
+# 0 - The players name
+loginMessage: "<yellow>{0} joined the game"
+# 0 - The string that wasn't a valid integer
+notANumber: "<red>{0} is not a valid number!"
+# 0 - Players currently online
+# 1 - Max players
+listHeader: "<gray>There is currently <yellow>{0}<gray> player online out of <yellow>{1}<gray> players."
+# 0 - Players currently online
+# 1 - Max players
+listHeaderPlural: "<gray>There are currently <yellow>{0}<gray> players online out of <yellow>{1}<gray> players."
+# 0 - Player who is having their notes fetched
+notesHeader: "Player notes for: <green>{0}"
+# 0 - Note ID
+# 1 - Author of the note
+# 2 - Timestamp
+notePrefix: "<gold><!italic>{0} - Written by: {1} on {2}"
+# 0 - The content of the note
+noteLine: "<newline><yellow># {0}"
+# 0 - The player
+# 1 - The number of notes logged for said player
+playerNoteAlert: "<gold>{0} has {1} note. <click:run_command:/notes {0} list><underlined>Click here to view their note."
+# 0 - The player
+# 1 - The number of notes logged for said player
+playerNoteAlertPlural: "<gold>{0} has {1} notes. <click:run_command:/notes {0} list><underlined>Click here to view their notes."
+smiteTitleHeader: "<red>You've been smitten."
+# 0 - The reason for the smite. Will default to noReasonProvided if no reason is specified.
+# 1 - The admin / staff member
+smiteTitleMessage: "<yellow>Be sure to follow the rules!"
+# 0 - The player
+# 1 - The reason for the smite. Will default to noReasonProvided if no reason is specified.
+# 2 - The admin / staff member
+smiteBroadcast: "<red>{0} has been a naughty, naughty boy.<newline><red> - Reason: <yellow>{1}<newline><red> - Smitten by: <yellow>{2}"
+# 0 - The player
+smittenQuietly: "<gray>Smitten {0} quietly."
+# 0 - The reason for being smitten
+smitten: "<red>You've been smitten. Reason: <yellow>{0}"
+nukerKickMessage: "Please turn off your nuker!"
+antiSpamMessage: "<gray>Please refrain from spamming messages."
+# 0 - The player
+banExpiredBroadcast: "Plex - Automatically unbanning {0}"
+# 0 - The player
+redisResetSuccessful: "<yellow>Successfuly reset {0}'s Redis punishments!"
+redisResetPlayerNotFound: "Couldn't find player in Redis punishments."
+reappliedGamerules: "<aqua>All game rules have been re-applied!"
+commandNotFound: "<red>That command could not be found!"
+# 0 - The command
+# 1 - A list of aliases found
+commandAliases: "<aqua>Aliases for {0} are: {1}"
 ```
 
 ## MiniMessage
