@@ -8,7 +8,8 @@ Plex builds against the latest Minecraft version available. A table has been pro
 
 | Plex Version | Minecraft Versions |
 | ------------ | ------------------ |
-| 1.4          | 1.19.4 - 1.20.4    |
+| 1.5-SNAPSHOT | 1.20.6 - 1.21.1    |
+| 1.4          | 1.20.4             |
 | 1.3          | 1.19.4 - 1.20.4    |
 | 1.2          | 1.18.2 - 1.19.2    |
 | 1.1.1        | 1.18.2 - 1.19.2    |
