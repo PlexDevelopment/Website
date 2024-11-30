@@ -9,36 +9,65 @@ type FeatureItem = {
 };
 
 const FeatureList: FeatureItem[] = [
-  {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
+    {
+        title: 'Performance Oriented',
+        Svg: require('@site/static/img/bolt-solid.svg').default,
+        description: (
+            <>
+                Plex was designed with performance in mind. Plex supports SQLite or MariaDB out of the box.
+                Plex also uses Redis for punishments instead of traditional YAML / JSON files.
+            </>
+        ),
+    },
+    {
+        title: 'Fully Customizable',
+        Svg: require('@site/static/img/sliders-solid.svg').default,
+        description: (
+            <>
+                Plex is designed to be customizable to fit your server's needs. Almost all messages within the plugin can be easily changed.
+            </>
+        ),
+    },
+    {
+        title: 'Permissions',
+        Svg: require('@site/static/img/dice-solid.svg').default,
+        description: (
+            <>
+                Plex allows you to use integrate with a permission system and "fake op" players. This allows server owners to have much more control over what is and isn't allowed.
+                Any Vault-compatible permission plugin will integrate with Plex and can be used instead of ranks.
+            </>
+        ),
+    },
+    {
+        title: 'Modular',
+        Svg: require('@site/static/img/download-solid.svg').default,
+        description: (
+            <>
+                Plex features a fully modular system. You can add or remove modules based on how your server is configured. If you're using permissions,
+                you likely won't need our command blocker, but you will if you use ranks.
+            </>
+        ),
+    },
+    {
+        title: 'Converters',
+        Svg: require('@site/static/img/forward-fast-solid.svg').default,
+        description: (
+            <>
+                We have written tools to convert your existing data from TotalFreedomMod to Plex. This will make your transition even easier so you won't
+                have to start fresh.
+            </>
+        ),
+    },
+    {
+        title: 'Quality Control',
+        Svg: require('@site/static/img/bug-slash-solid.svg').default,
+        description: (
+            <>
+                Each release is tested to find bugs before you have to encounter them on your server. Plex's codebase was designed for rapid progress and
+                won't unexpectedly break.
+            </>
+        ),
+    },
 ];
 
 function Feature({title, Svg, description}: FeatureItem) {
