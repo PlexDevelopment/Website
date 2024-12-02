@@ -28,7 +28,7 @@ const config: Config = {
                 docs: {
                     sidebarPath: './sidebars.ts',
                     editUrl:
-                        'https://github.com/plexusorg/Website/tree/master',
+                        'https://github.com/plexusorg/Website/tree/new',
                 },
                 theme: {
                     customCss: './src/css/custom.css',
