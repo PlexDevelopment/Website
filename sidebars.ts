@@ -47,12 +47,13 @@ const sidebars: SidebarsConfig = {
         {
             type: 'category',
             label: 'Modules',
-            items: ['modules/introduction', 'modules/bukkittelnet', 'modules/falseop', 'modules/httpd', 'modules/libsdisguises', 'modules/nush'],
+            items: ['modules/introduction', 'modules/bukkittelnet', 'modules/falseop', 'modules/httpd',
+                'modules/libsdisguises', 'modules/nickminimessage', 'modules/nush'],
         },
         {
-          type: 'doc',
-          label: 'Creating a Module',
-          id: 'create_module',
+            type: 'doc',
+            label: 'Creating a Module',
+            id: 'create_module',
         },
         {
             type: 'doc',

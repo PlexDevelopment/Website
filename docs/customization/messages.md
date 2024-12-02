@@ -302,7 +302,7 @@ commandAliases: "<aqua>Aliases for {0} are: {1}"
 The `messages.yml` file uses MiniMessage for coloring messages. For example, writing `<aqua>`, will color the text aqua.
 This is not like HTML, and you should not close the tag (`</aqua>`). There are some special functions as well, such as
 `<rainbow>`. The default color will be gray. For a complete guide on using MiniMessage,
-visit: [https://docs.adventure.kyori.net/minimessage/format.html](https://docs.adventure.kyori.net/minimessage/format.html).
+visit: [https://docs.advntr.dev/minimessage/format.html](https://docs.advntr.dev/minimessage/format.html).
 
 ## Troubleshooting
 

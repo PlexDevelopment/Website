@@ -11,11 +11,12 @@ server owners who may want a specific feature that's not built in to Plex.
 
 Below is a list of official and supported modules
 
-| Name          | Versions     |
-|---------------|--------------|
-| BukkitTelnet  | 1.5          |
-| HTTPD         | 1.5-SNAPSHOT |
-| LibsDisguises | 1.5-SNAPSHOT |
-| FalseOp       | 1.5-SNAPSHOT |
-| NUSH          | 1.5-SNAPSHOT |
-| TFMExtras     | 1.5-SNAPSHOT |
+| Name            | Versions     |
+|-----------------|--------------|
+| BukkitTelnet    | 1.5          |
+| HTTPD           | 1.5-SNAPSHOT |
+| LibsDisguises   | 1.5-SNAPSHOT |
+| NickMiniMessage | 1.5          |
+| FalseOp         | 1.5-SNAPSHOT |
+| NUSH            | 1.5-SNAPSHOT |
+| TFMExtras       | 1.5-SNAPSHOT |

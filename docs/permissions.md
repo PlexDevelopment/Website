@@ -102,6 +102,12 @@ modification) are defined by the server config and may vary.
 | undisguiseall  | plex.libsdisguises.undisguiseall  | Undisguise all players                                                                          |
 | undisguiseall  | plex.libsdisguises.bypass         | Bypass being undisguised. This can be overridden regardless of permission with the \`-a\` flag. |
 
+## NickMiniMessage Module
+
+| Command | Permission  | Description                                        |
+|---------|-------------|----------------------------------------------------|
+| nickmm  | plex.nickmm | Change your nickname using MiniMessage formatting! |
+
 ## NUSH Module
 
 | Command | Permission     | Description                       |
