@@ -46,22 +46,19 @@ const config: Config = {
             },
             items: [
                 {
-                    type: 'doc',
-                    docId: 'intro',
-                    position: 'left',
+                    to: '/docs/intro',
                     label: 'Introduction',
+                    position: 'left'
                 },
                 {
-                    type: 'doc',
-                    docId: 'compiling',
-                    position: 'left',
+                    to: '/docs/compiling',
                     label: 'Compiling',
+                    position: 'left'
                 },
                 {
-                    type: 'doc',
-                    docId: 'permissions',
-                    position: 'left',
+                    to: '/docs/permissions',
                     label: 'Permissions',
+                    position: 'left'
                 },
                 {
                     position: 'left',
