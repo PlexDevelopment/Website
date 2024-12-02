@@ -50,6 +50,11 @@ const sidebars: SidebarsConfig = {
             items: ['modules/introduction', 'modules/bukkittelnet', 'modules/falseop', 'modules/httpd', 'modules/libsdisguises', 'modules/nush'],
         },
         {
+          type: 'doc',
+          label: 'Creating a Module',
+          id: 'create_module',
+        },
+        {
             type: 'doc',
             label: 'Indefinite Bans',
             id: 'indefinitebans',
