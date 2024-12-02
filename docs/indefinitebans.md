@@ -4,9 +4,17 @@ title: Indefinite Bans
 ---
 
 # Indefinite Bans
-Similar to TotalFreedomMod, Plex has indefinite bans. Indefinite bans are reserved for players who should not automatically be unbanned. Anyone who has access to the `indefbans.yml` file can add indefinite bans. If you are using Redis, all indefinite bans will be uploaded to Redis on startup. From that point on, indefinite bans will be fetched from Redis instead of the `indefbans.yml` file. **Redis is NOT required to use indefinite bans.** If you do not use Redis, Plex will fetch indefinite bans from the `indefbans.yml` file. No matter which medium you use, you will always add new entries to the `indefbans.yml` file. Note that there is no in-game command for adding or removing indefinite bans.
+
+Plex has an indefinite ban system. Indefinite bans are reserved for players who should not
+automatically be unbanned. Anyone who has access to the `indefbans.yml` file can add indefinite bans. If you are using
+Redis, all indefinite bans will be uploaded to Redis on startup. From that point on, indefinite bans will be fetched
+from Redis instead of the `indefbans.yml` file. **Redis is NOT required to use indefinite bans.** If you do not use
+Redis, Plex will fetch indefinite bans from the `indefbans.yml` file. No matter which medium you use, you will always
+add new entries to the `indefbans.yml` file. Note that there is no in-game command for adding or removing indefinite
+bans.
 
 ## Default file
+
 ```yaml title=/plugins/Plex/indefbans.yml
 # Plex Indefinite Bans File
 # Players with their UUID / IP / Usernames in here will be indefinitely banned until removed
@@ -32,10 +40,22 @@ bypassers:
 ```
 
 ### How it works
-Each entry starts with a description. This is to help you organize indefinite bans. For example, you could have a section `griefers` for serial griefers or `bypassers` for players who have bypassed bans. The `users` section is for usernames only, the `uuids` section is only for UUIDs, and the `ips` section is for IPs only. If you do not want to ban a type, you do not have to include it. Note that no duplicate descriptions can exist. This means you cannot have `bypassers` as a section twice. The actual descriptions are not used in the plugins and can be anything you like. They do not affect the indefinite ban in any way.
+
+Each entry starts with a description. This is to help you organize indefinite bans. For example, you could have a
+section `griefers` for serial griefers or `bypassers` for players who have bypassed bans. The `users` section is for
+usernames only, the `uuids` section is only for UUIDs, and the `ips` section is for IPs only. If you do not want to ban
+a type, you do not have to include it. Note that no duplicate descriptions can exist. This means you cannot have
+`bypassers` as a section twice. The actual descriptions are not used in the plugins and can be anything you like. They
+do not affect the indefinite ban in any way.
 
 ### Converting indefinite bans
-If you are switching from TotalFreedomMod to Plex, we have developed a tool called IBConverter to convert your existing indefinite bans into Plex's format. For more information on IBConverter, visit [the GitHub page](https://github.com/PlexDevelopment/IBConverter). This tool was written in Rust. The only thing you need to give it is your existing `indefinitebans.yml` file from TotalFreedomMod. You can download a compiled version below:
+
+If you are switching from TotalFreedomMod to Plex, we have developed a tool called IBConverter to convert your existing
+indefinite bans into Plex's format. For more information on IBConverter,
+visit [the GitHub page](https://github.com/PlexDevelopment/IBConverter). This tool was written in Rust. The only thing
+you need to give it is your existing `indefinitebans.yml` file from TotalFreedomMod. You can download a compiled version
+below:
+
 - [IBConverter-Linux.zip](https://github.com/plexusorg/IBConverter/suites/6509280820/artifacts/242044369)
 - [IBConverter-Windows.zip](https://github.com/plexusorg/IBConverter/suites/6509280820/artifacts/242044371)
 - [IBConverter-Mac.zip](https://github.com/plexusorg/IBConverter/suites/6509280820/artifacts/242044370)

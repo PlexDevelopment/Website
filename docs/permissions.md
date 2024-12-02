@@ -4,11 +4,14 @@ title: Permissions
 ---
 
 # Permissions
-This page is a comprehensive list of all of Plex's permission nodes. Note that some of them (such as world entry and modification) are defined by the server config and may vary.
+
+This page is a comprehensive list of all of Plex's permission nodes. Note that some of them (such as world entry and
+modification) are defined by the server config and may vary.
 
 ## Plex
+
 | Command             | Permission                     | Description                                                                                     |
-| ------------------- | ------------------------------ | ----------------------------------------------------------------------------------------------- |
+|---------------------|--------------------------------|-------------------------------------------------------------------------------------------------|
 | adminchat           | plex.adminchat                 | Talk privately with other admins                                                                |
 | adminworld          | plex.adminworld                | Teleport to the adminworld                                                                      |
 | adventure           | plex.gamemode.adventure        | Set your own gamemode to adventure mode                                                         |
@@ -61,13 +64,15 @@ This page is a comprehensive list of all of Plex's permission nodes. Note that s
 | world               | plex.world                     | Teleport to a world.                                                                            |
 
 ## BukkitTelnet Module
+
 | Permission              | Description                                                 |
-| ----------------------- | ----------------------------------------------------------- |
+|-------------------------|-------------------------------------------------------------|
 | plex.telnet.autoconnect | Allow automatically connecting to telnet without a password |
 
 ## Guilds Module
+
 | Command       | Permission          | Description                                                   |
-| ------------- | ------------------- | ------------------------------------------------------------- |
+|---------------|---------------------|---------------------------------------------------------------|
 | guild         | plex.guilds.guild   | Guild menu                                                    |
 | guild chat    | plex.guilds.chat    | Toggles guild chat or sends a guild chat message              |
 | guild create  | plex.guilds.create  | Creates a guild with a specified name                         |
@@ -82,21 +87,45 @@ This page is a comprehensive list of all of Plex's permission nodes. Note that s
 | guild warp    | plex.guild.warp     | Warps to a specified guild warp                               |
 
 ## HTTPD Module
+
 | Permission                    | Description                                                                                   |
-| ----------------------------- | --------------------------------------------------------------------------------------------- |
-| plex.httpd.admins.access      | Allows seeing IP addresses of admins. Anyone can view the page regardless of permissions      |
+|-------------------------------|-----------------------------------------------------------------------------------------------|
 | plex.httpd.indefbans.access   | Allows accessing the indefinite bans. This permission is required to view the page at all.    |
 | plex.httpd.punishments.access | Allows seeing IP addresses of punishments. Anyone can view the page regardless of permissions |
 | plex.httpd.schematics.upload  | Allows uploading schematics to the HTTPD if the permission system is enabled.                 |
 
 ## LibsDisguises Module
+
 | Command        | Permission                        | Description                                                                                     |
-| -------------- | --------------------------------- | ----------------------------------------------------------------------------------------------- |
+|----------------|-----------------------------------|-------------------------------------------------------------------------------------------------|
 | disguisetoggle | plex.libsdisguises.disguisetoggle | Toggle LibsDisguises                                                                            |
 | undisguiseall  | plex.libsdisguises.undisguiseall  | Undisguise all players                                                                          |
 | undisguiseall  | plex.libsdisguises.bypass         | Bypass being undisguised. This can be overridden regardless of permission with the \`-a\` flag. |
 
 ## NUSH Module
-| Command | Permission        | Description            |
-| ------- | ----------------- | ---------------------- |
-| nush    | plex.nush.command | Toggle NUSH on or off. |
+
+| Command | Permission     | Description                       |
+|---------|----------------|-----------------------------------|
+| nush    | plex.nush.use  | Toggle NUSH on or off.            |
+| N/A     | plex.nush.view | View messages intercepted by NUSH |
+
+## TFMExtras Module
+
+
+| Command      | Permission                | Description                                                                                                                                                               |
+|--------------|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| admininfo    | plex.tfmextras.admininfo  | Information on how to apply for admin                                                                                                                                     |
+| autoclear    | plex.tfmextras.autoclear  | Toggle whether or not a player has their inventory automatically cleared when they join                                                                                   |
+| autoteleport | plex.tfmextras.autotp     | If a player is specified, it will toggle whether or not the player is automatically teleported when they join. If no player is specified, you will be randomly teleported |
+| cake         | plex.tfmextras.cake       | For the people that are still alive - gives a cake to everyone on the server                                                                                              |
+| cartsit      | plex.tfmextras.cartsit    | Sit in nearest minecart. If target is in a minecart already, they will be ejected                                                                                         |
+| clearchat    | plex.tfmextras.clearchat  | Clears the chat                                                                                                                                                           |
+| cloudclear   | plex.tfmextras.cloudclear | Clears lingering potion area effect clouds                                                                                                                                |
+| clownfish    | plex.tfmextras.clownfish  | Gives a player a clownfish capable of knocking people back                                                                                                                |
+| eject        | plex.tfmextras.eject      | Removes all passengers from a player                                                                                                                                      |
+| enchant      | plex.tfmextras.enchant    | Enchants an item                                                                                                                                                          |
+| emf          | plex.tfmextras.emf        | Speak english.                                                                                                                                                            |
+| expel        | plex.tfmextras.expel      | Pushes away nearby players                                                                                                                                                |
+| jumppads     | plex.tfmextras.jumppads   | Enables jump pads for yourself or another player. Mode types available: none, regular, enhanced, extreme                                                                  |
+| orbit        | plex.tfmextras.orbit      | Accelerates the player at a super fast rate                                                                                                                               |
+| randomfish   | plex.tfmextras.randomfish | Spawns a random type of fish at your location                                                                                                                             |

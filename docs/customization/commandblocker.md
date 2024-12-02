@@ -4,9 +4,12 @@ title: Command Blocker
 ---
 
 # Command Blocker
-Plex features an advanced command blocker with support for matching and RegEx statements. It is recommended that you use this only in conjunction with ranks. If you are using permissions, there is not as much of a need for a command blocker.
+
+Plex features an advanced command blocker with support for matching and RegEx statements. It is recommended that you use
+this only in conjunction with ranks. If you are using permissions, there is not as much of a need for a command blocker.
 
 ## Default file
+
 The default `commands.yml` file is below.
 
 ```yaml title=/plugins/Plex/commands.yml
@@ -66,7 +69,7 @@ commands:
   - "r:a:^(co|core|coreprotect) (rb|rollback|l|lookup|rl|reload):_"
   - "r:e:^[A-z]*:[A-z]*::<gray>Plugin specific commands are disabled."
 
-# These commands will be blocked when a player is muted
+# These commands will be blocked when a player is muted or when chat is toggled off.
 block_on_mute:
   - me
   - say
@@ -76,10 +79,15 @@ block_on_mute:
 ```
 
 ## The symbols
+
 - `r` represents RegEx and `m` represents matching.
-- The ranks are `e` to block for everyone, `a` to block for admins and above, and `s` to block for senior admins and above.
+- The ranks are `e` to block for everyone, `a` to block for admins and above, and `s` to block for senior admins and
+  above.
 
 ## The format
+
 An example formatted entry in the `commands.yml` file would look like this:
 `"m:e:mail sendall:You cannot send messages to everyone on the server"`
-The `m` will match the `mail sendall` command. The `e` stands for everyone, so it will block this command for everyone. The last part is the message. If you use `_` as the blocked message, it will use the default message specified in `messages.yml`
+The `m` will match the `mail sendall` command. The `e` stands for everyone, so it will block this command for everyone.
+The last part is the message. If you use `_` as the blocked message, it will use the default message specified in
+`messages.yml`

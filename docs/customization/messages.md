@@ -4,10 +4,14 @@ title: Messages
 ---
 
 # Messages
-Almost all of the messages inside of Plex are fully customizable. This page will document how to change messages in the ```messages.yml``` file inside the Plex folder.
+
+Almost all the messages inside of Plex are fully customizable. This page will document how to change messages in the
+```messages.yml``` file inside the Plex folder.
 
 ## Default file
+
 The default `messages.yml` file is below.
+
 ```yaml title=/plugins/Plex/messages.yml
 # Plex Messages File
 # This file uses the MiniMessage system.
@@ -244,7 +248,7 @@ nobodyHasThatMaterial: "<gray>No one online has that in their inventory."
 # 0 - The attempted material name
 materialNotFound: "<red>{0} is not a valid item/block name."
 # 0 - The players name
-loginMessage: "<yellow>{0} joined the game"
+loginMessage: "<yellow><translate:multiplayer.player.joined:{0}>"
 # 0 - The string that wasn't a valid integer
 notANumber: "<red>{0} is not a valid number!"
 # 0 - Players currently online
@@ -294,7 +298,15 @@ commandAliases: "<aqua>Aliases for {0} are: {1}"
 ```
 
 ## MiniMessage
-The `messages.yml` file uses MiniMessage for coloring messages. For example, writing `<aqua>`, will color the text aqua. This is not like HTML, and you should not close the tag (`</aqua>`). There are some special functions as well, such as `<rainbow>`. The default color will be gray. For a complete guide on using MiniMessage, visit: [https://docs.adventure.kyori.net/minimessage/format.html](https://docs.adventure.kyori.net/minimessage/format.html).
+
+The `messages.yml` file uses MiniMessage for coloring messages. For example, writing `<aqua>`, will color the text aqua.
+This is not like HTML, and you should not close the tag (`</aqua>`). There are some special functions as well, such as
+`<rainbow>`. The default color will be gray. For a complete guide on using MiniMessage,
+visit: [https://docs.adventure.kyori.net/minimessage/format.html](https://docs.adventure.kyori.net/minimessage/format.html).
 
 ## Troubleshooting
-If you receive `No message.` when executing a command, it is likely you need to regenerate your `messages.yml` file. The default configuration file is also available on [GitHub](https://raw.githubusercontent.com/PlexDevelopment/Plex/master/src/main/resources/messages.yml). As of Plex 0.6 (Beta 6), your `messages.yml` file should automatically update with new entries.
+
+If you receive `No message.` when executing a command, it is likely you need to regenerate your `messages.yml` file. The
+default configuration file is also available
+on [GitHub](https://raw.githubusercontent.com/PlexDevelopment/Plex/master/src/main/resources/messages.yml). As of Plex
+0.6 (Beta 6), your `messages.yml` file should automatically update with new entries.

@@ -4,7 +4,10 @@ title: Versions
 ---
 
 # Versions
-Plex builds against the latest Minecraft version available. A table has been provided below to help you determine which versions of Plex work with your version of Minecraft. Note that these are only the versions we have officially tested. Plex may or may not work with versions other than in this table.
+
+Plex builds against the latest Minecraft version available. A table has been provided below to help you determine which
+versions of Plex work with your version of Minecraft. Note that these are only the versions we have officially tested.
+Plex may or may not work with versions other than in this table.
 
 | Plex Version | Minecraft Versions |
 |--------------|--------------------|
