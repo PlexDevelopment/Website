@@ -3,6 +3,9 @@ id: redis
 title: Configuring Redis
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Redis
 This page will show you how to setup and configure Redis for Plex. This tutorial assumes a moderate amount of computer knowledge. Please note that setting up Redis is optional. It offers many performance improvements, but can be dangerous if improperly configured.
 
@@ -10,7 +13,7 @@ This page will show you how to setup and configure Redis for Plex. This tutorial
 If you are using Pterodactyl, setting up Redis is easy. You will need to download and add the Redis egg, which requires administrator privileges. If you are not an administrator, you may request an administrator to set up Redis for you.
 
 ### Setup the Redis egg
-Right click on [this link](https://docs.plex.us.org/egg-redis-7.json) and click "Save As". Please ensure that the filename ends in .json
+Right-click on [this link](@site/static/egg-redis-7.json) and click "Save As". Please ensure that the filename ends in .json
 
 On your Pterodactyl admin page, click on the "Nests" from the sidebar. Click the blue "Create New" button and enter "Databases" for the name.
 Then, click on the green "Import Egg" button. Import the `egg-redis-7.json` file you just downloaded and make sure the "Associated Nest" is set to "Databases".
@@ -81,5 +84,22 @@ side:
 
 Replace `your_secure_password_here` with the password you made for Redis. Now, Plex will use Redis for storing punishment data. Note that the JSON files are still made as a backup no matter what.
 
-### Firewall Configuraton
+### Firewall Configuration
 If you are using a firewall, you may have to allow port `6380`. It is safe to allow connections from anywhere provided you have followed the documentation correctly.
+<Tabs>
+    <TabItem value="ufw" label="ufw" default>
+
+        ```bash
+        ufw allow 6380
+        ```
+
+    </TabItem>
+    <TabItem value="iptables" label="iptables">
+
+        ```bash
+        iptables -A INPUT -p tcp --dport 6380 -j ACCEPT
+        iptables -A OUTPUT -p tcp --dport 6380 -j ACCEPT
+        ```
+
+    </TabItem>
+</Tabs>
