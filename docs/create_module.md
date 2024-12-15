@@ -60,7 +60,7 @@ You'll want to make sure your class extends `PlexCommand` and implements both th
 `smartTabComplete(@NotNull CommandSender sender, @NotNull String alias, @NotNull String[] args)` methods.
 
 You should implement the `@CommandParameters` and `@CommandPermissions` annotations instead of handling permissions for
-the main command inside of the actual `execute()` block.
+the main command inside the actual `execute()` block.
 
 ## Creating listeners
 
@@ -113,7 +113,7 @@ public class ExampleModule extends PlexModule
 }
 ```
 
-The `"tfmextras/config.yml"` part refers to where the configuration file is stored relative to `/src/main/resources`.
+The `"examplemodule/config.yml"` part refers to where the configuration file is stored relative to `/src/main/resources`.
 The `"config.yml"` refers to where it should go inside the `/plugins/Plex/modules/Module-Example` folder.
 
 You can then call values from the configuration with the following:
