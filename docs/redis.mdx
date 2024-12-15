@@ -39,7 +39,7 @@ The password for Redis is set under the "Service Variables" tab. Please change i
 ### Configuration
 Once the Redis server has been installed, go to the "File Manager" tab and open `redis.conf`. You will need to change the bind address.
 
-```title=redis.conf
+```conf title="redis.conf"
 ...
 ################################## NETWORK #####################################
 
@@ -73,7 +73,7 @@ Find this block in your Redis configuration file and ensure bind is set to `172.
 ### Plex Configuration
 Redis should be successfully set up! Now all you have to do is enter your credentials into the Plex configuration file.
 
-```yaml title=/plugins/Plex/config.yml
+```yaml title="/plugins/Plex/config.yml"
 side:
     enabled: true
     auth: true

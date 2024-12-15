@@ -12,7 +12,7 @@ Almost all the messages inside of Plex are fully customizable. This page will do
 
 The default `messages.yml` file is below.
 
-```yaml title=/plugins/Plex/messages.yml
+```yaml title="/plugins/Plex/messages.yml"
 # Plex Messages File
 # This file uses the MiniMessage system.
 # Documentation available at https://docs.adventure.kyori.net/minimessage/format.html

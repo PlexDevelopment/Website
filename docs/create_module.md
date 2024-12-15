@@ -26,7 +26,7 @@ should set your version to that as well.
 
 You should also look for this block of code in your `build.gradle.kts file`:
 
-```kts title=build.gradle.kts
+```kotlin title="build.gradle.kts"
 tasks.getByName<Jar>("jar") {
     archiveBaseName.set("Module-ExampleModule")
     archiveVersion.set("")
@@ -48,7 +48,7 @@ Plex.
 
 When you create a new command, you should register it in your main class as follows
 
-```java
+```java title="/src/main/java/ExampleModule.java"
 registerCommand(new ExampleCommand());
 ```
 
@@ -66,18 +66,57 @@ the main command inside of the actual `execute()` block.
 
 Listeners function just like they do in Bukkit, they listen for events. You'll want to do two things. Make sure your
 listener extends the `PlexListener` class rather than the Bukkit default `Listener` class. The `PlexListener` class is a
-wrapper for the `Listener` class and has the same functionality as the Bukkit one. You'll also want to ensure you register the listener in the main class as follows:
-```java
+wrapper for the `Listener` class and has the same functionality as the Bukkit one. You'll also want to ensure you
+register the listener in the main class as follows:
+
+```java title="/src/main/java/ExampleModule.java"
 registerListener(new ExampleListener());
 ```
+
 Make sure you replace the `ExampleListener` class with your own class name.
 
-You can listen for as many events as you like per class. An example to listen for an event when a player joins and send them a message is as follows:
-```java
+You can listen for as many events as you like per class. An example to listen for an event when a player joins and send
+them a message is as follows:
+
+```java title="/src/main/java/ExampleModule.java"
 @EventHandler
 public void onPlayerJoin(PlayerJoinEvent event)
 {
     Player player = event.getPlayer();
     player.sendMessage(Component.text("This is a message from Plex's example module!").color(NamedTextColor.GOLD));
 }
+```
+
+## Creating and using configuration files
+
+To create a configuration file for your module, you should create a new folder in the `/src/main/resources` directory
+with the module name. An example for the example module would be `/src/main/resources/examplemodule`. Within the folder,
+you can create your `config.yml` file. In the main class, you should add a new `ModuleConfig` globally, and load it on
+the `load()` method.
+
+```java title="/src/main/java/ExampleModule.java"
+public class ExampleModule extends PlexModule
+{
+    @Getter
+    private static ExampleModule module;
+
+    @Getter
+    private ModuleConfig config;
+
+    @Override
+    public void load()
+    {
+        module = this;
+        config = new ModuleConfig(this, "examplemodule/config.yml", "config.yml");
+        config.load();
+    }
+}
+```
+
+The `"tfmextras/config.yml"` part refers to where the configuration file is stored relative to `/src/main/resources`.
+The `"config.yml"` refers to where it should go inside the `/plugins/Plex/modules/Module-Example` folder.
+
+You can then call values from the configuration with the following:
+```java
+ExampleModule.getModule().getConfig().getString("module.test-message");
 ```

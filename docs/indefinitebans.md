@@ -15,7 +15,7 @@ bans.
 
 ## Default file
 
-```yaml title=/plugins/Plex/indefbans.yml
+```yaml title="/plugins/Plex/indefbans.yml"
 # Plex Indefinite Bans File
 # Players with their UUID / IP / Usernames in here will be indefinitely banned until removed
 

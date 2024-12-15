@@ -12,7 +12,7 @@ This page will show you how to modify the configuration file. The configuration 
 
 Below is the default `config.yml` file when Plex is loaded for the first time.
 
-```yaml title=/plugins/Plex/config.yml
+```yaml title="/plugins/Plex/config.yml"
 # Plex Configuration File
 # For documentation, please visit: https://plex.us.org
 

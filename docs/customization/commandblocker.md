@@ -12,7 +12,7 @@ this only in conjunction with ranks. If you are using permissions, there is not 
 
 The default `commands.yml` file is below.
 
-```yaml title=/plugins/Plex/commands.yml
+```yaml title="/plugins/Plex/commands.yml"
 #
 # Command Blocker
 #
