@@ -92,7 +92,7 @@ modification) are defined by the server config and may vary.
 |-------------------------------|-----------------------------------------------------------------------------------------------|
 | plex.httpd.indefbans.access   | Allows accessing the indefinite bans. This permission is required to view the page at all.    |
 | plex.httpd.punishments.access | Allows seeing IP addresses of punishments. Anyone can view the page regardless of permissions |
-| plex.httpd.schematics.upload  | Allows uploading schematics to the HTTPD if the permission system is enabled.                 |
+| plex.httpd.schematics.upload  | Allows WorldEdit uploading schematics to the HTTPD                                            |
 
 ## LibsDisguises Module
 
