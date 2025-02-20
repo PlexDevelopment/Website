@@ -5294,8 +5294,8 @@ __metadata:
     clsx: "npm:^2.1.1"
     prism-react-renderer: "npm:^2.4.1"
     prismjs: "npm:^1.29.0"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
     typescript: "npm:~5.7.3"
     utility-types: "npm:^3.11.0"
   languageName: unknown
@@ -10432,7 +10432,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.2.0":
+"react-dom@npm:^18.3.1":
   version: 18.3.1
   resolution: "react-dom@npm:18.3.1"
   dependencies:
@@ -10561,7 +10561,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18.2.0":
+"react@npm:^18.3.1":
   version: 18.3.1
   resolution: "react@npm:18.3.1"
   dependencies:
